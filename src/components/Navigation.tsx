@@ -46,7 +46,7 @@ const Navigation = () => {
             Nandan Goyal
           </NavLink>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation - visible on laptop and above */}
           <div className="hidden lg:flex items-center gap-6">
             {navItems.map((item) => (
               <NavLink
@@ -60,13 +60,14 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* Mobile Navigation */}
-          <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger asChild>
-              <button className="lg:hidden text-foreground p-2 hover:bg-muted rounded-lg transition-colors">
-                {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-              </button>
-            </SheetTrigger>
+          {/* Mobile & Tablet Navigation - hidden on laptop and above */}
+          <div className="lg:hidden">
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+              <SheetTrigger asChild>
+                <button className="text-foreground p-2 hover:bg-muted rounded-lg transition-colors">
+                  {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                </button>
+              </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <SheetHeader>
                 <SheetTitle className="text-left text-2xl font-bold">
@@ -87,7 +88,8 @@ const Navigation = () => {
                 ))}
               </nav>
             </SheetContent>
-          </Sheet>
+            </Sheet>
+          </div>
         </div>
       </div>
     </nav>
