@@ -1,52 +1,93 @@
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { Menu, X } from "lucide-react";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
 const Navigation = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   const navLinkClass = ({ isActive }: { isActive: boolean }) =>
     `text-sm font-medium transition-colors hover:text-accent ${
       isActive ? "text-accent border-b-2 border-accent" : "text-foreground"
     } pb-1`;
 
+  const mobileNavLinkClass = ({ isActive }: { isActive: boolean }) =>
+    `block text-lg font-medium py-3 px-4 rounded-lg transition-colors ${
+      isActive
+        ? "bg-accent text-accent-foreground"
+        : "text-foreground hover:bg-muted"
+    }`;
+
+  const navItems = [
+    { to: "/", label: "Home", end: true },
+    { to: "/about", label: "About" },
+    { to: "/achievements", label: "Achievements" },
+    { to: "/skills", label: "Skills" },
+    { to: "/journey", label: "Journey" },
+    { to: "/testimonials", label: "Testimonials" },
+    { to: "/projects", label: "Projects" },
+    { to: "/contact", label: "Contact" },
+  ];
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border">
-      <div className="container mx-auto px-6 py-4">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
+      <div className="container mx-auto px-4 sm:px-6 py-4">
         <div className="flex items-center justify-between">
-          <NavLink to="/" className="text-xl font-bold text-foreground">
+          <NavLink
+            to="/"
+            className="text-lg sm:text-xl font-bold text-foreground hover:text-accent transition-colors"
+          >
             Nandan Goyal
           </NavLink>
-          
-          <div className="hidden md:flex items-center gap-8">
-            <NavLink to="/" end className={navLinkClass}>
-              Home
-            </NavLink>
-            <NavLink to="/about" className={navLinkClass}>
-              About
-            </NavLink>
-            <NavLink to="/achievements" className={navLinkClass}>
-              Achievements
-            </NavLink>
-            <NavLink to="/skills" className={navLinkClass}>
-              Skills
-            </NavLink>
-            <NavLink to="/journey" className={navLinkClass}>
-              Journey
-            </NavLink>
-            <NavLink to="/testimonials" className={navLinkClass}>
-              Testimonials
-            </NavLink>
-            <NavLink to="/projects" className={navLinkClass}>
-              Projects
-            </NavLink>
-            <NavLink to="/contact" className={navLinkClass}>
-              Contact
-            </NavLink>
+
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center gap-6">
+            {navItems.map((item) => (
+              <NavLink
+                key={item.to}
+                to={item.to}
+                end={item.end}
+                className={navLinkClass}
+              >
+                {item.label}
+              </NavLink>
+            ))}
           </div>
 
-          {/* Mobile menu button - simplified for now */}
-          <button className="md:hidden text-foreground">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
+          {/* Mobile Navigation */}
+          <Sheet open={isOpen} onOpenChange={setIsOpen}>
+            <SheetTrigger asChild>
+              <button className="lg:hidden text-foreground p-2 hover:bg-muted rounded-lg transition-colors">
+                {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+              <SheetHeader>
+                <SheetTitle className="text-left text-2xl font-bold">
+                  Menu
+                </SheetTitle>
+              </SheetHeader>
+              <nav className="flex flex-col gap-2 mt-8">
+                {navItems.map((item) => (
+                  <NavLink
+                    key={item.to}
+                    to={item.to}
+                    end={item.end}
+                    className={mobileNavLinkClass}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.label}
+                  </NavLink>
+                ))}
+              </nav>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </nav>
