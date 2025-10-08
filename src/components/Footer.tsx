@@ -17,22 +17,22 @@ const Footer = () => {
     {
       icon: Mail,
       label: "Email",
-      href: "mailto:nandangoyal2003@gmail.com",
+      href: "mailto:nandannn.bti@gmail.com",
     },
     {
       icon: Phone,
       label: "Phone",
-      href: "tel:+919116018444",
+      href: "tel:+16043697940",
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      href: "https://www.linkedin.com/in/nandan-goyal-82b751245",
+      href: "https://linkedin.com/in/nandan-goyal-577b47226",
     },
     {
       icon: Github,
       label: "GitHub",
-      href: "https://github.com/nandangoyal",
+      href: "https://github.com/nandan1717",
     },
   ];
 
