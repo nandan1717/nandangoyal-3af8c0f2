@@ -52,35 +52,46 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links - 3 Columns */}
+          {/* Quick Links - Organized in 3 Vertical Columns */}
           <div>
             <h3 className="text-lg font-bold mb-3">Quick Links</h3>
-            <nav className="grid grid-cols-3 gap-x-4 gap-y-2">
-              <NavLink to="/achievements" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
-                Achievements
-              </NavLink>
-              <NavLink to="/skills" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
-                Skills
-              </NavLink>
-              <NavLink to="/" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
-                Home
-              </NavLink>
-              <NavLink to="/projects" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
-                Projects
-              </NavLink>
-              <NavLink to="/journey" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
-                Journey
-              </NavLink>
-              <NavLink to="/contact" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
-                Contact
-              </NavLink>
-              <NavLink to="/testimonials" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
-                Testimonials
-              </NavLink>
-              <NavLink to="/about" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
-                About
-              </NavLink>
-            </nav>
+            <div className="grid grid-cols-3 gap-x-6 gap-y-2">
+              {/* Column 1 */}
+              <div className="flex flex-col gap-2">
+                <NavLink to="/achievements" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
+                  Achievements
+                </NavLink>
+                <NavLink to="/projects" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
+                  Projects
+                </NavLink>
+                <NavLink to="/testimonials" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
+                  Testimonials
+                </NavLink>
+              </div>
+              
+              {/* Column 2 */}
+              <div className="flex flex-col gap-2">
+                <NavLink to="/skills" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
+                  Skills
+                </NavLink>
+                <NavLink to="/journey" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
+                  Journey
+                </NavLink>
+                <NavLink to="/about" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
+                  About
+                </NavLink>
+              </div>
+              
+              {/* Column 3 */}
+              <div className="flex flex-col gap-2">
+                <NavLink to="/" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
+                  Home
+                </NavLink>
+                <NavLink to="/contact" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
+                  Contact
+                </NavLink>
+              </div>
+            </div>
           </div>
 
           {/* Social Links */}
