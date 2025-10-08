@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import { Briefcase, Code, Brain, Users } from "lucide-react";
 
 const Skills = () => {
@@ -97,6 +98,7 @@ const Skills = () => {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 };

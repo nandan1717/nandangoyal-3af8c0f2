@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import { Banknote, Code, Briefcase, GraduationCap, Users, Heart, Shirt, TrendingUp } from "lucide-react";
 
 const Journey = () => {
@@ -112,6 +113,7 @@ const Journey = () => {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 };

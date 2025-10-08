@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import gokuHappy from "@/assets/goku-happy.png";
 
 const Home = () => {
@@ -54,11 +55,7 @@ const Home = () => {
         </div>
       </main>
 
-      <footer className="fixed bottom-0 left-0 right-0 border-t border-border bg-background/95 backdrop-blur-md">
-        <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4 text-center text-xs sm:text-sm text-muted-foreground">
-          © 2025 Nandan Goyal | Hungry, not greedy.
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

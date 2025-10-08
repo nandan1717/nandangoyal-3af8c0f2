@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 
 const Achievements = () => {
   return (
@@ -118,6 +119,7 @@ const Achievements = () => {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 };

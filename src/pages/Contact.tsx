@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import { Mail, Phone, Linkedin, MapPin } from "lucide-react";
 
 const Contact = () => {
@@ -85,6 +86,7 @@ const Contact = () => {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 };

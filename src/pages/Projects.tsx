@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Code, Shirt, Briefcase } from "lucide-react";
 
@@ -73,6 +74,7 @@ const Projects = () => {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 };
