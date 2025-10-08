@@ -13,7 +13,7 @@ const Home = () => {
           <div className="grid md:grid-cols-2 gap-8 items-center min-h-[80vh]">
             <div className="text-center md:text-left space-y-6 order-2 md:order-1">
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight text-foreground">
-                I'm Nandan. A 20-year-old figuring it out, hungry to grow, and building my own path.
+                I'm Nandan. A 21-year-old figuring it out, hungry to grow, and building my own path.
               </h1>
 
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
@@ -40,12 +40,15 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="order-1 md:order-2 flex justify-center items-center">
+            <div className="order-1 md:order-2 flex flex-col justify-center items-center gap-4">
               <img 
                 src={gokuHappy} 
                 alt="Happy Goku character representing energy and determination" 
                 className="w-full max-w-sm md:max-w-md lg:max-w-lg h-auto object-contain hover:scale-105 transition-transform duration-300"
               />
+              <p className="text-sm md:text-base text-muted-foreground italic text-center max-w-md px-4">
+                I use Goku here because I'm driven by the same spirit of growth, resilience, and always pushing my own limits—just like him
+              </p>
             </div>
           </div>
         </div>

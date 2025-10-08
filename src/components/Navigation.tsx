@@ -30,8 +30,8 @@ const Navigation = () => {
             <NavLink to="/journey" className={navLinkClass}>
               Journey
             </NavLink>
-            <NavLink to="/journal" className={navLinkClass}>
-              Journal
+            <NavLink to="/testimonials" className={navLinkClass}>
+              Testimonials
             </NavLink>
             <NavLink to="/projects" className={navLinkClass}>
               Projects
