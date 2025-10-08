@@ -37,18 +37,18 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-card border-t border-border mt-auto">
+    <footer className="bg-primary text-primary-foreground border-t border-primary/20 mt-auto">
       <div className="container mx-auto px-4 py-8 md:py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* About Section */}
           <div>
             <h3 className="text-lg font-bold mb-4">Nandan Goyal</h3>
-            <p className="text-muted-foreground text-sm mb-4">
-              Computer Science Student passionate about technology, development, and continuous learning.
+            <p className="text-primary-foreground/80 text-sm mb-4">
+              Aspiring Agile Project Manager | BBA Project Management Student | VP, YU Creators Club | Tech-Savvy & AI-Driven | Vibe Coder | Seeking Project Management and Tech Roles
             </p>
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+            <div className="flex items-center gap-2 text-sm text-primary-foreground/80">
               <MapPin className="w-4 h-4" />
-              <span>Pune, India</span>
+              <span>Surrey, Canada</span>
             </div>
           </div>
 
@@ -60,7 +60,7 @@ const Footer = () => {
                 <NavLink
                   key={link.path}
                   to={link.path}
-                  className="text-sm text-muted-foreground hover:text-accent transition-colors"
+                  className="text-sm text-primary-foreground/80 hover:text-accent transition-colors"
                 >
                   {link.label}
                 </NavLink>
@@ -80,7 +80,7 @@ const Footer = () => {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 text-sm text-muted-foreground hover:text-accent transition-colors group"
+                    className="flex items-center gap-3 text-sm text-primary-foreground/80 hover:text-accent transition-colors group"
                   >
                     <Icon className="w-4 h-4" />
                     <span>{link.label}</span>
@@ -92,7 +92,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="mt-8 pt-8 border-t border-border text-center text-sm text-muted-foreground">
+        <div className="mt-8 pt-8 border-t border-primary-foreground/20 text-center text-sm text-primary-foreground/80">
           <p>&copy; {new Date().getFullYear()} Nandan Goyal. All rights reserved.</p>
         </div>
       </div>
