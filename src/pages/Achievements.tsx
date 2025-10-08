@@ -13,44 +13,38 @@ const Achievements = () => {
           <p className="text-xl text-muted-foreground mb-12">Key milestones and certifications that shaped my journey</p>
 
           <div className="space-y-6">
-            {/* Professional Experience Achievements */}
+            {/* Key Achievements */}
             <div className="bg-muted/30 p-8 rounded-lg border-l-4 border-accent">
-              <h3 className="text-2xl font-semibold text-foreground mb-3">Project Management Intern - I Support Your Business</h3>
-              <p className="text-muted-foreground mb-3">February 2025 - Present (Remote, Burnaby)</p>
-              <ul className="space-y-2 text-foreground leading-relaxed list-disc list-inside">
-                <li>Led end-to-end development of client platform (www.isupportyouprogram.com) through 10+ Agile sprints</li>
-                <li>Implemented Jira as organization's first PM tool, increasing cross-team alignment across 5 departments</li>
-                <li>Hired and mentored intern to manage Jira operations while focusing on IT project execution</li>
-              </ul>
-            </div>
-
-            <div className="bg-muted/30 p-8 rounded-lg border-l-4 border-accent">
-              <h3 className="text-2xl font-semibold text-foreground mb-3">Vice President - Yorkville University Creators Club</h3>
-              <p className="text-muted-foreground mb-3">May 2025 - Present</p>
-              <ul className="space-y-2 text-foreground leading-relaxed list-disc list-inside">
-                <li>Co-founded the club with the President and launched the official website</li>
-                <li>Built and led a team of 8 across music, photography, outreach, and events</li>
-                <li>Increased student engagement and earned recognition from university leadership</li>
-              </ul>
-            </div>
-
-            <div className="bg-muted/30 p-8 rounded-lg border-l-4 border-accent">
-              <h3 className="text-2xl font-semibold text-foreground mb-3">Vibe Coding (Freelance Web Development)</h3>
-              <p className="text-muted-foreground mb-3">March 2023 - Present</p>
-              <ul className="space-y-2 text-foreground leading-relaxed list-disc list-inside">
-                <li>Delivered 3+ commercial web projects on schedule by planning end-to-end workflows</li>
-                <li>Improved project delivery efficiency by ~70% using AI-assisted prototyping</li>
-                <li>Maintained consistent quality across diverse projects with reproducible workflows</li>
-              </ul>
-            </div>
-
-            <div className="bg-muted/30 p-8 rounded-lg border-l-4 border-accent">
-              <h3 className="text-2xl font-semibold text-foreground mb-3">Customer Service Excellence - Walmart</h3>
-              <p className="text-muted-foreground mb-3">March 2023 - Present</p>
-              <ul className="space-y-2 text-foreground leading-relaxed list-disc list-inside">
-                <li>Achieved 5000+ 5-star ratings from customers over 2+ years</li>
-                <li>Trained and mentored 5+ new team members on customer service techniques</li>
-                <li>Consistently received positive recognition from managers for outstanding service</li>
+              <h3 className="text-2xl font-semibold text-foreground mb-4">Key Achievements</h3>
+              <ul className="space-y-3 text-foreground leading-relaxed">
+                <li className="flex items-start gap-3">
+                  <span className="text-accent font-bold mt-1">•</span>
+                  <span>Led end-to-end development and launched a client platform for I Support Your Business, delivering 10 Agile sprints on time and within budget.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-accent font-bold mt-1">•</span>
+                  <span>Implemented Jira for project management, enabling real-time tracking across 5 departments.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-accent font-bold mt-1">•</span>
+                  <span>Organized campus events for 150+ students as Vice-President, Creators Club, Yorkville University.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-accent font-bold mt-1">•</span>
+                  <span>Received over 5,000 five-star ratings at Walmart for customer service excellence.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-accent font-bold mt-1">•</span>
+                  <span>Improved project delivery efficiency by 70% using AI-assisted prototyping (Vibe Coding).</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-accent font-bold mt-1">•</span>
+                  <span>Trained and onboarded 5+ new team members at Walmart, ensuring consistent service standards.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-accent font-bold mt-1">•</span>
+                  <span>Supported logistics for Canada's largest Halloween event (Pumpkins After Dark) with 60,000 guests.</span>
+                </li>
               </ul>
             </div>
 
@@ -77,13 +71,13 @@ const Achievements = () => {
               
               <div className="space-y-4">
                 <div className="bg-accent/10 p-6 rounded-lg border-l-4 border-accent">
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Power Platform Fundamentals (PL-900)</h3>
-                  <p className="text-muted-foreground">Microsoft Certified - In Progress</p>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Microsoft Power Platform Fundamentals (PL-900)</h3>
+                  <p className="text-muted-foreground">In Progress</p>
                 </div>
 
                 <div className="bg-accent/10 p-6 rounded-lg border-l-4 border-accent">
                   <h3 className="text-xl font-semibold text-foreground mb-2">Certified Associate in Project Management (CAPM)</h3>
-                  <p className="text-muted-foreground">Project Management Institute - In Progress</p>
+                  <p className="text-muted-foreground">PMI - In Progress</p>
                 </div>
 
                 <div className="bg-accent/10 p-6 rounded-lg border-l-4 border-accent">
@@ -93,12 +87,12 @@ const Achievements = () => {
 
                 <div className="bg-accent/10 p-6 rounded-lg border-l-4 border-accent">
                   <h3 className="text-xl font-semibold text-foreground mb-2">Full Stack Web Development</h3>
-                  <p className="text-muted-foreground">Bangalore Computer Education - 2023</p>
+                  <p className="text-muted-foreground">Bangalore Computer Education (2023)</p>
                 </div>
 
                 <div className="bg-accent/10 p-6 rounded-lg border-l-4 border-accent">
                   <h3 className="text-xl font-semibold text-foreground mb-2">C and C++ Programming</h3>
-                  <p className="text-muted-foreground">Bangalore Computer Education - 2023</p>
+                  <p className="text-muted-foreground">Bangalore Computer Education (2023)</p>
                 </div>
               </div>
             </div>

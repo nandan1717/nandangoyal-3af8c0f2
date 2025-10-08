@@ -5,39 +5,18 @@ import { Code, Shirt, Briefcase } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
-      title: "I Support Your Business Platform",
-      description: "Led end-to-end development of www.isupportyouprogram.com, managing 10+ Agile sprints, gathering requirements from executives, and delivering features on budget and timeline.",
-      icon: Code,
-      status: "Feb 2025 - Present",
+      title: "Project Management Intern, I Support Your Business",
+      description: "Led requirements gathering and delivered features in 10 Agile sprints for www.isupportyouprogram.com, meeting budget and timeline targets. Facilitated Agile ceremonies, sprint planning, and implemented Jira, improving cross-team alignment and visibility across 5 departments. Hired and mentored a new intern for Jira management, ensuring smooth backlog tracking.",
+      icon: Briefcase,
+      status: "Feb 2025 – Mar 2026 (Remote, Burnaby, Canada)",
       tech: "Agile, Jira, Stakeholder Management",
     },
     {
-      title: "Yorkville University Creators Club Website",
-      description: "Launched the official website for the Creators Club, introducing marketing workflows and training guidelines. Built as part of VP responsibilities.",
+      title: "Vibe Coding (Freelance)",
+      description: "Delivered 3 web projects on schedule by breaking tasks into sprints and coordinating milestones. Improved delivery speed by 70% with AI-assisted prototyping and iterative client feedback. Maintained quality and approvals for diverse projects via detailed prioritization and workflow management.",
       icon: Code,
-      status: "May 2025",
-      tech: "Web Development, Marketing Workflows",
-    },
-    {
-      title: "Vibe Coding Projects",
-      description: "Delivered 3+ commercial and hobby web projects using AI-assisted prototyping, reducing delivery time by ~70%. Projects include Creators Club site, I Support You platform, and custom client solutions.",
-      icon: Code,
-      status: "March 2023 - Present",
+      status: "Mar 2023 – Present (Hybrid)",
       tech: "HTML, CSS, JavaScript, Python/Flask, AI APIs",
-    },
-    {
-      title: "Olympic Stadium Project (Class Simulation)",
-      description: "Designed a hypothetical $1M Olympic Stadium project managed through ClickUp, developing project scope statement, WBS, and supporting documentation.",
-      icon: Briefcase,
-      status: "Academic Project",
-      tech: "ClickUp, Project Planning, WBS",
-    },
-    {
-      title: "GEAR (Fashion-Tech Brand)",
-      description: "Developing a fashion-forward brand focused on sculptural sneakers and cooling apparel. In early development phase with sketches and 3D mockups.",
-      icon: Shirt,
-      status: "In Development",
-      tech: "Brand Development, Product Design",
     },
   ];
 

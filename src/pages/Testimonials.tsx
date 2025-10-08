@@ -5,28 +5,10 @@ import { Quote } from "lucide-react";
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Sarah Mitchell",
-      role: "Senior Product Manager",
-      company: "TechCorp",
-      text: "Working with Nandan was an absolute pleasure. His dedication to understanding the problem and delivering thoughtful solutions is rare for someone his age. He brings fresh perspectives and isn't afraid to challenge assumptions.",
-    },
-    {
-      name: "Dr. James Chen",
-      role: "Professor of Computer Science",
-      company: "University of British Columbia",
-      text: "Nandan stands out not just for his technical skills, but for his genuine curiosity and hunger to learn. He approaches every challenge with the mindset of growth, not just completion.",
-    },
-    {
-      name: "Priya Sharma",
-      role: "Startup Founder",
-      company: "GreenPath Solutions",
-      text: "Nandan's passion for sustainability isn't just talk—it's evident in how he thinks about every project. He's the kind of person who asks 'how can we make this better for everyone?' rather than just 'how do we finish this?'",
-    },
-    {
-      name: "Michael Torres",
-      role: "Team Lead",
-      company: "Digital Innovations",
-      text: "What impressed me most about Nandan is his honesty. He's not trying to be perfect—he's trying to be real. That authenticity, combined with his work ethic, makes him someone you want on your team.",
+      name: "Team Member",
+      role: "Creators Club",
+      company: "Yorkville University",
+      text: "Nandan is a creative leader and reliable teammate who led the Creators Club to launch our university's official student site and increase engagement through multiple events.",
     },
   ];
 

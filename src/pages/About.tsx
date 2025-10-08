@@ -18,9 +18,22 @@ const About = () => {
             </p>
 
             <p className="text-foreground">
-              I'm 20 years old and currently living in Surrey, BC. Right now, I'm pursuing my BBA 
-              in Project Management at Yorkville University, set to graduate in April 2026.
+              I'm 21 years old and currently living in Surrey, BC. Right now, I'm pursuing my BBA 
+              in Project Management at Yorkville University, set to graduate in March 2026.
             </p>
+            
+            <div className="bg-accent/5 p-6 rounded-lg border-l-4 border-accent mb-6">
+              <p className="text-foreground font-semibold mb-2">Education</p>
+              <p className="text-foreground text-lg">
+                <span className="font-semibold">Bachelor of Business Administration (Project Management)</span><br/>
+                Yorkville University, Canada<br/>
+                Expected Graduation: March 2026
+              </p>
+              <p className="text-sm text-muted-foreground mt-3">
+                Relevant Courses: Intro to Project Management, Teams and Leadership, Project Planning, 
+                Execution/Control/Closure, Advanced PM, Business/Sustainability, Managerial Accounting, Business Strategy
+              </p>
+            </div>
 
             <p className="text-foreground">
               But if I had to describe myself beyond the labels? I'd say I'm someone who's always 

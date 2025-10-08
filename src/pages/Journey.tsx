@@ -11,8 +11,8 @@ const Journey = () => {
     },
     {
       date: "March 2023",
-      title: "Volunteer - FIRST Robotics Canada",
-      description: "Supported logistics and participant needs during robotics competitions with 50-100 attendees, learning to adapt quickly to shifting tasks.",
+      title: "Floater Volunteer - FIRST Robotics Canada",
+      description: "Provided logistics and support for competitions with 50–100 participants, swiftly adapting to team needs across multiple teams.",
       icon: Heart,
     },
     {
@@ -36,7 +36,7 @@ const Journey = () => {
     {
       date: "October 2024",
       title: "Event Volunteer - Pumpkins After Dark",
-      description: "Supported logistics and crowd flow at Canada's award-winning Halloween event with 60,000+ attendees at Tourism Burnaby.",
+      description: "Supported logistics and crowd flow for 60,000 attendees at Canada's largest Halloween event (Tourism Burnaby), reducing wait times and improving guest experience.",
       icon: Heart,
     },
     {
@@ -48,7 +48,7 @@ const Journey = () => {
     {
       date: "May 2025 - Present",
       title: "Vice President - Yorkville University Creators Club",
-      description: "Co-founded the club, launched official website, and built a team of 8 to lead music, photography, outreach, and events. Earning recognition from university leadership.",
+      description: "Co-founded the club, launched the official website, built a team of 8, and organized campus events for 150+ students. Earned university recognition for club impact.",
       icon: Users,
     },
     {
@@ -59,8 +59,8 @@ const Journey = () => {
     },
     {
       date: "Expected March 2026",
-      title: "BBA Graduation & Career Launch",
-      description: "Set to graduate with BBA in Project Management, ready to contribute to Technology Consulting roles.",
+      title: "BBA Graduation",
+      description: "Set to graduate with BBA in Project Management from Yorkville University, ready to contribute to Technology Consulting roles.",
       icon: TrendingUp,
     },
   ];

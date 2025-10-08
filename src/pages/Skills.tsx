@@ -4,45 +4,38 @@ import { Briefcase, Code, Brain, Users } from "lucide-react";
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Project Management & Leadership",
+      title: "Project Management",
       icon: Briefcase,
       skills: [
-        "Agile methodology, sprint planning, and task prioritization",
-        "Stakeholder communication and expectation management",
-        "Team coordination, mentoring, and onboarding",
-        "Timeline management and milestone tracking",
+        "Agile methodology, sprint planning",
+        "Risk and timeline management",
       ],
     },
     {
-      title: "Technical & Tools",
-      icon: Code,
-      skills: [
-        "Microsoft Office 365 (Docs, Sheets, PowerPoints, etc.)",
-        "Jira - Project management and tracking",
-        "ClickUp - Project planning and execution",
-        "HTML, CSS, JavaScript - Web development",
-        "Python/Flask - Backend development",
-        "AI-assisted development and API integration",
-      ],
-    },
-    {
-      title: "Analytical & Problem-Solving",
-      icon: Brain,
-      skills: [
-        "Rapid prototyping and iterative development",
-        "Data-driven actionable recommendations",
-        "Customer needs assessment and process optimization",
-        "Risk management and decision-making under constraints",
-      ],
-    },
-    {
-      title: "Communication & Interpersonal",
+      title: "Leadership",
       icon: Users,
       skills: [
-        "Customer service excellence, empathy, and conflict resolution",
-        "Cross-functional team collaboration",
-        "Training and mentoring team members",
-        "Stakeholder engagement and relationship building",
+        "Team onboarding and delegation",
+        "Cross-functional coordination",
+        "Stakeholder communication",
+      ],
+    },
+    {
+      title: "Technical",
+      icon: Code,
+      skills: [
+        "Jira, Microsoft Office 360, Docs, Sheets, PowerPoint",
+        "HTML/CSS/JavaScript, Python/Flask",
+        "API integration, AI-assisted prototyping",
+      ],
+    },
+    {
+      title: "Analysis & Customer Service",
+      icon: Brain,
+      skills: [
+        "Rapid prototyping, iterative development",
+        "Actionable recommendations",
+        "Empathy, conflict resolution, survey design",
       ],
     },
   ];
@@ -93,12 +86,14 @@ const Skills = () => {
           </div>
 
           <div className="mt-16 bg-accent/5 p-8 rounded-lg border-l-4 border-accent">
-            <h2 className="text-2xl font-bold text-foreground mb-4">Continuous Learning</h2>
-            <p className="text-lg text-foreground leading-relaxed">
-              Currently pursuing <span className="font-semibold">CAPM certification</span>, <span className="font-semibold">Power Platform Fundamentals (PL-900)</span>, 
-              and <span className="font-semibold">Digital Transformation</span> from University of Waterloo. 
-              Expected graduation from BBA Project Management program in <span className="font-semibold">March 2026</span>.
-            </p>
+            <h2 className="text-2xl font-bold text-foreground mb-4">Certifications</h2>
+            <div className="space-y-2 text-lg text-foreground leading-relaxed">
+              <p><span className="font-semibold">Microsoft Power Platform Fundamentals (PL-900)</span> – In Progress</p>
+              <p><span className="font-semibold">Certified Associate in Project Management (CAPM), PMI</span> – In Progress</p>
+              <p><span className="font-semibold">Digital Transformation, University of Waterloo</span> – In Progress</p>
+              <p><span className="font-semibold">Full Stack Web Development, Bangalore Computer Education</span> (2023)</p>
+              <p><span className="font-semibold">C and C++ Programming, Bangalore Computer Education</span> (2023)</p>
+            </div>
           </div>
         </div>
       </main>
