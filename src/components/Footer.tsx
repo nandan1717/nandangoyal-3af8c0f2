@@ -39,9 +39,9 @@ const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground border-t border-primary/20 mt-auto">
       <div className="container mx-auto px-4 py-6 md:py-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {/* About Section */}
-          <div className="sm:col-span-2 lg:col-span-1">
+          <div>
             <h3 className="text-lg font-bold mb-3">Nandan Goyal</h3>
             <p className="text-primary-foreground/80 text-sm mb-3 leading-relaxed">
               Aspiring Agile Project Manager | BBA Project Management Student | VP, YU Creators Club | Tech-Savvy & AI-Driven | Vibe Coder | Seeking Tech Consulting and Project Management Roles
@@ -52,10 +52,10 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links - Organized in Columns */}
+          {/* Quick Links - 3 Vertical Columns */}
           <div>
             <h3 className="text-lg font-bold mb-3">Quick Links</h3>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-4 sm:gap-x-6 gap-y-2">
+            <div className="grid grid-cols-3 gap-x-4 gap-y-2">
               {/* Column 1 */}
               <div className="flex flex-col gap-2">
                 <NavLink to="/achievements" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
@@ -83,7 +83,7 @@ const Footer = () => {
               </div>
               
               {/* Column 3 */}
-              <div className="flex flex-col gap-2 col-span-2 sm:col-span-1 grid grid-cols-2 sm:grid-cols-1">
+              <div className="flex flex-col gap-2">
                 <NavLink to="/" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
                   Home
                 </NavLink>
