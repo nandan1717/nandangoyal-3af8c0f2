@@ -39,19 +39,20 @@ const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground border-t border-primary/20 mt-auto">
       <div className="container mx-auto px-4 py-6 md:py-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-          {/* About Section */}
-          <div>
-            <h3 className="text-lg font-bold mb-3">Nandan Goyal</h3>
-            <p className="text-primary-foreground/80 text-sm mb-3 leading-relaxed">
-              Aspiring Agile Project Manager | BBA Project Management Student | VP, YU Creators Club | Tech-Savvy & AI-Driven | Vibe Coder | Seeking Tech Consulting and Project Management Roles
-            </p>
-            <div className="flex items-center gap-2 text-sm text-primary-foreground/80">
-              <MapPin className="w-4 h-4" />
-              <span>Surrey, Canada</span>
-            </div>
+        {/* Top Section - Full Width Bio */}
+        <div className="mb-6 pb-6 border-b border-primary-foreground/20">
+          <h3 className="text-lg font-bold mb-3">Nandan Goyal</h3>
+          <p className="text-primary-foreground/80 text-sm mb-3 leading-relaxed max-w-3xl">
+            Aspiring Agile Project Manager | BBA Project Management Student | VP, YU Creators Club | Tech-Savvy & AI-Driven | Vibe Coder | Seeking Tech Consulting and Project Management Roles
+          </p>
+          <div className="flex items-center gap-2 text-sm text-primary-foreground/80">
+            <MapPin className="w-4 h-4" />
+            <span>Surrey, Canada</span>
           </div>
+        </div>
 
+        {/* Bottom Section - Quick Links & Connect */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Quick Links - 3 Vertical Columns */}
           <div>
             <h3 className="text-lg font-bold mb-3">Quick Links</h3>
@@ -94,7 +95,7 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Social Links */}
+          {/* Connect */}
           <div>
             <h3 className="text-lg font-bold mb-3">Connect</h3>
             <div className="flex flex-col gap-2">
