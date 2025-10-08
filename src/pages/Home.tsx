@@ -17,6 +17,10 @@ const Home = () => {
                 I'm Nandan. A 21-year-old figuring it out, hungry to grow, and building my own path.
               </h1>
 
+              <p className="text-sm sm:text-base md:text-lg text-accent font-semibold leading-relaxed">
+                Aspiring Agile Project Manager | BBA Project Management Student | VP, YU Creators Club | Tech-Savvy & AI-Driven | Vibe Coder | Seeking Tech Consulting and Project Management Roles
+              </p>
+
               <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed">
                 I'm not here to show you a perfect version of myself. I'm here to show you the real one — 
                 the student, the dreamer, the late-night overthinker, the one who's hungry to build 

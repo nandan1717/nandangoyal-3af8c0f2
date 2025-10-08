@@ -44,7 +44,7 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-bold mb-3">Nandan Goyal</h3>
             <p className="text-primary-foreground/80 text-sm mb-3 leading-relaxed">
-              Aspiring Agile Project Manager | BBA Project Management Student | VP, YU Creators Club | Tech-Savvy & AI-Driven | Vibe Coder
+              Aspiring Agile Project Manager | BBA Project Management Student | VP, YU Creators Club | Tech-Savvy & AI-Driven | Vibe Coder | Seeking Tech Consulting and Project Management Roles
             </p>
             <div className="flex items-center gap-2 text-sm text-primary-foreground/80">
               <MapPin className="w-4 h-4" />
