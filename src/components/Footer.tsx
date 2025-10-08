@@ -52,19 +52,34 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links - 2 Rows */}
+          {/* Quick Links - 3 Columns */}
           <div>
             <h3 className="text-lg font-bold mb-3">Quick Links</h3>
-            <nav className="grid grid-cols-2 gap-x-4 gap-y-2">
-              {navLinks.map((link) => (
-                <NavLink
-                  key={link.path}
-                  to={link.path}
-                  className="text-sm text-primary-foreground/80 hover:text-accent transition-colors"
-                >
-                  {link.label}
-                </NavLink>
-              ))}
+            <nav className="grid grid-cols-3 gap-x-4 gap-y-2">
+              <NavLink to="/achievements" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
+                Achievements
+              </NavLink>
+              <NavLink to="/skills" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
+                Skills
+              </NavLink>
+              <NavLink to="/" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
+                Home
+              </NavLink>
+              <NavLink to="/projects" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
+                Projects
+              </NavLink>
+              <NavLink to="/journey" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
+                Journey
+              </NavLink>
+              <NavLink to="/contact" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
+                Contact
+              </NavLink>
+              <NavLink to="/testimonials" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
+                Testimonials
+              </NavLink>
+              <NavLink to="/about" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
+                About
+              </NavLink>
             </nav>
           </div>
 
