@@ -12,7 +12,7 @@ const About = () => {
             Nandan Goyal
           </h1>
           <p className="text-xl text-accent font-semibold mb-12">
-            BBA Project Management Student | Agile PM Intern | Tech Leader
+            BBA Project Management Student | Agile PM Intern | Vibe Coder
           </p>
 
           {/* Professional Overview Section */}
@@ -52,7 +52,7 @@ const About = () => {
               <div className="space-y-6">
                 <div className="border-l-4 border-accent pl-6">
                   <h3 className="text-xl font-semibold text-foreground">Project Management Intern</h3>
-                  <p className="text-accent font-medium mb-2">I Support Your Business | Feb 2025 – Mar 2026</p>
+                  <p className="text-accent font-medium mb-2">I Support Your Business | Feb 2025 – Present</p>
                   <ul className="space-y-2 text-foreground/80">
                     <li>• Leading 10+ Agile sprints with cross-functional teams across 5 departments</li>
                     <li>• Implementing Jira for improved project tracking and team alignment</li>
@@ -71,12 +71,22 @@ const About = () => {
                 </div>
 
                 <div className="border-l-4 border-accent pl-6">
-                  <h3 className="text-xl font-semibold text-foreground">Freelance Developer</h3>
-                  <p className="text-accent font-medium mb-2">Vibe Coding | Mar 2023 – Present</p>
+                  <h3 className="text-xl font-semibold text-foreground">Vibe Coder</h3>
+                  <p className="text-accent font-medium mb-2">Freelance | Mar 2023 – Present</p>
                   <ul className="space-y-2 text-foreground/80">
                     <li>• Delivered 3 web projects using React, TypeScript, and Supabase</li>
                     <li>• Improved delivery speed by 70% with AI-assisted prototyping</li>
                     <li>• Managing client relationships and iterative feedback cycles</li>
+                  </ul>
+                </div>
+
+                <div className="border-l-4 border-accent pl-6">
+                  <h3 className="text-xl font-semibold text-foreground">Cashier</h3>
+                  <p className="text-accent font-medium mb-2">Walmart | Part-time</p>
+                  <ul className="space-y-2 text-foreground/80">
+                    <li>• Developed customer service and communication skills in fast-paced retail environment</li>
+                    <li>• Learned patience, people management, and handling pressure in high-volume transactions</li>
+                    <li>• Applied problem-solving skills to resolve customer issues efficiently</li>
                   </ul>
                 </div>
               </div>
@@ -99,11 +109,7 @@ const About = () => {
 
                 <ul className="space-y-6 text-foreground">
                   <li className="pl-6 border-l-2 border-accent">
-                    I work part-time at <span className="font-semibold">Walmart as a cashier</span> — 
-                    it taught me more about patience, people, and handling pressure than any textbook could.
-                  </li>
-                  <li className="pl-6 border-l-2 border-accent">
-                    In 2023, I picked up <span className="font-semibold">web development</span>. I don't 
+                    In 2023, I picked up <span className="font-semibold">vibe coding</span>. I don't 
                     code like a Silicon Valley engineer — I build because I enjoy creating things that work, 
                     mixing tools like AI and my own skills.
                   </li>

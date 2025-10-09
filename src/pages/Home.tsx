@@ -26,7 +26,7 @@ const Home = () => {
 
             <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed max-w-4xl mx-auto">
               BBA Project Management Student | VP, YU Creators Club | PM Intern at ISYB | 
-              Full-Stack Developer (React, TypeScript, Supabase)
+              Vibe Coder
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center pt-4">
