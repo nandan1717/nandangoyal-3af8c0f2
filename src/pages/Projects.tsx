@@ -66,46 +66,14 @@ const Projects = () => {
                   className="border-2 hover:border-accent transition-all hover:shadow-lg group overflow-hidden"
                 >
                   <CardHeader>
-                    <div className="flex items-start justify-between gap-4">
-                      <div className="flex-1">
-                        <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent group-hover:text-accent-foreground transition-colors">
-                          <Icon className="w-8 h-8 text-accent group-hover:text-accent-foreground" />
-                        </div>
-                        <CardTitle className="text-2xl group-hover:text-accent transition-colors mb-2">
-                          {project.title}
-                        </CardTitle>
-                        <div className="text-xs text-accent font-semibold uppercase tracking-wide">
-                          {project.status}
-                        </div>
-                      </div>
-                      {project.link && (
-                        <Button 
-                          asChild 
-                          className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold"
-                        >
-                          <a href={project.link} target="_blank" rel="noopener noreferrer" className="gap-2">
-                            View Project
-                            <ExternalLink className="w-4 h-4" />
-                          </a>
-                        </Button>
-                      )}
-                      {project.links && (
-                        <div className="flex flex-wrap gap-2">
-                          {project.links.map((link, linkIdx) => (
-                            <Button 
-                              key={linkIdx}
-                              asChild 
-                              size="sm"
-                              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold"
-                            >
-                              <a href={link.url} target="_blank" rel="noopener noreferrer" className="gap-2">
-                                {link.label}
-                                <ExternalLink className="w-3 h-3" />
-                              </a>
-                            </Button>
-                          ))}
-                        </div>
-                      )}
+                    <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent group-hover:text-accent-foreground transition-colors">
+                      <Icon className="w-8 h-8 text-accent group-hover:text-accent-foreground" />
+                    </div>
+                    <CardTitle className="text-2xl group-hover:text-accent transition-colors mb-2">
+                      {project.title}
+                    </CardTitle>
+                    <div className="text-xs text-accent font-semibold uppercase tracking-wide">
+                      {project.status}
                     </div>
                   </CardHeader>
                   <CardContent className="space-y-6">
@@ -120,6 +88,37 @@ const Projects = () => {
                         ))}
                       </ul>
                     </div>
+
+                    {(project.link || project.links) && (
+                      <div>
+                        <h4 className="font-semibold text-foreground mb-3">View Project:</h4>
+                        <div className="flex flex-wrap gap-3">
+                          {project.link && (
+                            <Button 
+                              asChild 
+                              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold"
+                            >
+                              <a href={project.link} target="_blank" rel="noopener noreferrer" className="gap-2">
+                                Visit Website
+                                <ExternalLink className="w-4 h-4" />
+                              </a>
+                            </Button>
+                          )}
+                          {project.links?.map((link, linkIdx) => (
+                            <Button 
+                              key={linkIdx}
+                              asChild 
+                              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold"
+                            >
+                              <a href={link.url} target="_blank" rel="noopener noreferrer" className="gap-2">
+                                {link.label}
+                                <ExternalLink className="w-4 h-4" />
+                              </a>
+                            </Button>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                     
                     {project.screenshots && project.screenshots.length > 0 && (
                       <div>
