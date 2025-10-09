@@ -35,6 +35,11 @@ const Projects = () => {
       icon: Code,
       status: "Mar 2023 – Present (Hybrid)",
       tech: "HTML, CSS, JavaScript, Python/Flask, AI APIs",
+      links: [
+        { url: "https://nandangoyal.me", label: "Portfolio Website" },
+        { url: "https://yucreatorsclub.ca", label: "YU Creators Club" },
+        { url: "https://www.isupportyouprogram.com", label: "I Support Your Business" }
+      ]
     },
   ];
 
@@ -83,6 +88,23 @@ const Projects = () => {
                             <ExternalLink className="w-4 h-4" />
                           </a>
                         </Button>
+                      )}
+                      {project.links && (
+                        <div className="flex flex-wrap gap-2">
+                          {project.links.map((link, linkIdx) => (
+                            <Button 
+                              key={linkIdx}
+                              asChild 
+                              size="sm"
+                              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold"
+                            >
+                              <a href={link.url} target="_blank" rel="noopener noreferrer" className="gap-2">
+                                {link.label}
+                                <ExternalLink className="w-3 h-3" />
+                              </a>
+                            </Button>
+                          ))}
+                        </div>
                       )}
                     </div>
                   </CardHeader>
