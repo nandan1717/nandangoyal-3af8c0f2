@@ -1,20 +1,37 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Code, Shirt, Briefcase } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Code, Briefcase, ExternalLink } from "lucide-react";
+import isybEcosystem from "@/assets/isyb-ecosystem.png";
+import isybEvents from "@/assets/isyb-events.png";
+import isybPortfolio from "@/assets/isyb-portfolio.png";
 
 const Projects = () => {
   const projects = [
     {
       title: "Project Management Intern, I Support Your Business",
-      description: "Led requirements gathering and delivered features in 10 Agile sprints for www.isupportyouprogram.com, meeting budget and timeline targets. Facilitated Agile ceremonies, sprint planning, and implemented Jira, improving cross-team alignment and visibility across 5 departments. Hired and mentored a new intern for Jira management, ensuring smooth backlog tracking.",
+      highlights: [
+        "Led requirements gathering and delivered features in 10 Agile sprints",
+        "Facilitated Agile ceremonies and sprint planning",
+        "Implemented Jira, improving cross-team alignment across 5 departments",
+        "Hired and mentored new intern for Jira management",
+        "Met all budget and timeline targets"
+      ],
       icon: Briefcase,
       status: "Feb 2025 – Mar 2026 (Remote, Burnaby, Canada)",
       tech: "Agile, Jira, Stakeholder Management",
+      link: "https://www.isupportyouprogram.com",
+      screenshots: [isybEcosystem, isybEvents, isybPortfolio],
     },
     {
       title: "Vibe Coding (Freelance)",
-      description: "Delivered 3 web projects on schedule by breaking tasks into sprints and coordinating milestones. Improved delivery speed by 70% with AI-assisted prototyping and iterative client feedback. Maintained quality and approvals for diverse projects via detailed prioritization and workflow management.",
+      highlights: [
+        "Delivered 3 web projects on schedule by breaking tasks into sprints",
+        "Improved delivery speed by 70% with AI-assisted prototyping",
+        "Maintained quality through iterative client feedback",
+        "Implemented detailed prioritization and workflow management"
+      ],
       icon: Code,
       status: "Mar 2023 – Present (Hybrid)",
       tech: "HTML, CSS, JavaScript, Python/Flask, AI APIs",
@@ -35,31 +52,76 @@ const Projects = () => {
             playing with, testing, or starting:
           </p>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="space-y-8">
             {projects.map((project, index) => {
               const Icon = project.icon;
               return (
                 <Card 
                   key={index} 
-                  className="border-2 hover:border-accent transition-all hover:shadow-lg group"
+                  className="border-2 hover:border-accent transition-all hover:shadow-lg group overflow-hidden"
                 >
                   <CardHeader>
-                    <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent group-hover:text-accent-foreground transition-colors">
-                      <Icon className="w-8 h-8 text-accent group-hover:text-accent-foreground" />
-                    </div>
-                    <CardTitle className="text-xl group-hover:text-accent transition-colors">
-                      {project.title}
-                    </CardTitle>
-                    <div className="text-xs text-accent font-semibold uppercase tracking-wide">
-                      {project.status}
+                    <div className="flex items-start justify-between gap-4">
+                      <div className="flex-1">
+                        <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent group-hover:text-accent-foreground transition-colors">
+                          <Icon className="w-8 h-8 text-accent group-hover:text-accent-foreground" />
+                        </div>
+                        <CardTitle className="text-2xl group-hover:text-accent transition-colors mb-2">
+                          {project.title}
+                        </CardTitle>
+                        <div className="text-xs text-accent font-semibold uppercase tracking-wide">
+                          {project.status}
+                        </div>
+                      </div>
+                      {project.link && (
+                        <Button 
+                          asChild 
+                          className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold"
+                        >
+                          <a href={project.link} target="_blank" rel="noopener noreferrer" className="gap-2">
+                            View Project
+                            <ExternalLink className="w-4 h-4" />
+                          </a>
+                        </Button>
+                      )}
                     </div>
                   </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-base text-foreground/80 leading-relaxed mb-3">
-                      {project.description}
-                    </CardDescription>
-                    <div className="text-sm text-muted-foreground italic">
-                      {project.tech}
+                  <CardContent className="space-y-6">
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-3">Key Achievements:</h4>
+                      <ul className="space-y-2">
+                        {project.highlights.map((highlight, idx) => (
+                          <li key={idx} className="flex items-start gap-3">
+                            <span className="text-accent font-bold mt-1">•</span>
+                            <span className="text-foreground/80 leading-relaxed">{highlight}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    
+                    {project.screenshots && project.screenshots.length > 0 && (
+                      <div>
+                        <h4 className="font-semibold text-foreground mb-3">Project Screenshots:</h4>
+                        <div className="grid md:grid-cols-3 gap-4">
+                          {project.screenshots.map((screenshot, idx) => (
+                            <div 
+                              key={idx} 
+                              className="rounded-lg overflow-hidden border-2 border-border hover:border-accent transition-colors"
+                            >
+                              <img 
+                                src={screenshot} 
+                                alt={`${project.title} screenshot ${idx + 1}`}
+                                className="w-full h-48 object-cover"
+                              />
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                    
+                    <div className="pt-4 border-t border-border">
+                      <span className="text-sm font-semibold text-muted-foreground">Technologies: </span>
+                      <span className="text-sm text-accent font-medium">{project.tech}</span>
                     </div>
                   </CardContent>
                 </Card>
