@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import gokuHappy from "@/assets/goku-happy.png";
 
 const About = () => {
   return (
@@ -97,39 +98,52 @@ const About = () => {
           <div className="pt-12 border-t-2 border-border">
             <h2 className="text-3xl font-bold text-foreground mb-8">Beyond the Resume</h2>
             
-            <div className="space-y-8 text-lg leading-relaxed">
-              <p className="text-foreground text-xl">
-                But if I had to describe myself beyond the labels? I'd say I'm someone who's always 
-                hungry. Hungry to learn, to create, to test myself, and to leave something behind 
-                that actually matters.
-              </p>
+            <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-start mb-8">
+              <div className="space-y-6 text-lg leading-relaxed">
+                <p className="text-foreground text-xl">
+                  But if I had to describe myself beyond the labels? I'd say I'm someone who's always 
+                  hungry. Hungry to learn, to create, to test myself, and to leave something behind 
+                  that actually matters.
+                </p>
 
-              <div className="bg-muted/30 p-8 rounded-lg">
-                <p className="text-foreground font-semibold text-xl mb-6">Here's the real me:</p>
+                <div className="bg-muted/30 p-8 rounded-lg">
+                  <p className="text-foreground font-semibold text-xl mb-6">Here's the real me:</p>
 
-                <ul className="space-y-6 text-foreground">
-                  <li className="pl-6 border-l-2 border-accent">
-                    In 2023, I picked up <span className="font-semibold">vibe coding</span>. I don't 
-                    code like a Silicon Valley engineer — I build because I enjoy creating things that work, 
-                    mixing tools like AI and my own skills.
-                  </li>
-                  <li className="pl-6 border-l-2 border-accent">
-                    I've volunteered at community events like <span className="font-semibold">Pumpkin After 
-                    Dark in Burnaby</span>, because giving back feels right.
-                  </li>
-                  <li className="pl-6 border-l-2 border-accent">
-                    My dream? To build an <span className="font-semibold">empire in India centered around 
-                    sustainability and agro-waste innovation</span>. And right now, I'm also working on 
-                    <span className="font-semibold"> GEAR</span>, my own fashion-forward, sculptural sneaker 
-                    and cooling apparel brand.
-                  </li>
-                </ul>
+                  <ul className="space-y-6 text-foreground">
+                    <li className="pl-6 border-l-2 border-accent">
+                      In 2023, I picked up <span className="font-semibold">vibe coding</span>. I don't 
+                      code like a Silicon Valley engineer — I build because I enjoy creating things that work, 
+                      mixing tools like AI and my own skills.
+                    </li>
+                    <li className="pl-6 border-l-2 border-accent">
+                      I've volunteered at community events like <span className="font-semibold">Pumpkin After 
+                      Dark in Burnaby</span>, because giving back feels right.
+                    </li>
+                    <li className="pl-6 border-l-2 border-accent">
+                      My dream? To build an <span className="font-semibold">empire in India centered around 
+                      sustainability and agro-waste innovation</span>. And right now, I'm also working on 
+                      <span className="font-semibold"> GEAR</span>, my own fashion-forward, sculptural sneaker 
+                      and cooling apparel brand.
+                    </li>
+                  </ul>
+                </div>
+
+                <p className="text-foreground">
+                  I'm not perfect. I don't have it all figured out. But I'm moving — step by step, 
+                  brick by brick.
+                </p>
               </div>
 
-              <p className="text-foreground">
-                I'm not perfect. I don't have it all figured out. But I'm moving — step by step, 
-                brick by brick.
-              </p>
+              <div className="flex flex-col justify-center items-center gap-4">
+                <img 
+                  src={gokuHappy} 
+                  alt="Happy Goku character representing energy and determination" 
+                  className="w-full max-w-sm md:max-w-md h-auto object-contain hover:scale-105 transition-transform duration-300 rounded-lg"
+                />
+                <p className="text-sm md:text-base text-muted-foreground italic text-center max-w-md px-4">
+                  I use Goku here because I'm driven by the same spirit of growth, resilience, and always pushing my own limits—just like him
+                </p>
+              </div>
             </div>
           </div>
         </div>
