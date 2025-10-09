@@ -81,7 +81,7 @@ const About = () => {
                 </div>
 
                 <div className="border-l-4 border-accent pl-6">
-                  <h3 className="text-xl font-semibold text-foreground">Cashier</h3>
+                  <h3 className="text-xl font-semibold text-foreground">Cashier, Customer Service Associate</h3>
                   <p className="text-accent font-medium mb-2">Walmart | Part-time</p>
                   <ul className="space-y-2 text-foreground/80">
                     <li>• Developed customer service and communication skills in fast-paced retail environment</li>
@@ -130,11 +130,6 @@ const About = () => {
                 I'm not perfect. I don't have it all figured out. But I'm moving — step by step, 
                 brick by brick.
               </p>
-
-              <blockquote className="border-l-4 border-accent bg-accent/5 pl-8 pr-6 py-6 my-12 italic text-2xl text-foreground">
-                "I don't want to be perfect. I just want to be real, keep learning, and leave 
-                something behind that matters."
-              </blockquote>
             </div>
           </div>
         </div>

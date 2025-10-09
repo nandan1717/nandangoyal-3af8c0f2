@@ -61,6 +61,10 @@ const Home = () => {
               <div className="text-3xl sm:text-4xl font-bold text-accent mb-2">150+</div>
               <div className="text-xs sm:text-sm text-muted-foreground">Students Led at YU Club</div>
             </div>
+            <div className="bg-card p-6 rounded-lg border border-border shadow-sm text-center hover:shadow-md hover:border-accent/50 transition-all duration-300 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+              <div className="text-3xl sm:text-4xl font-bold text-accent mb-2">5000+</div>
+              <div className="text-xs sm:text-sm text-muted-foreground">5-Star Customer Service Ratings</div>
+            </div>
           </div>
 
           {/* Personal Story Section - Second Fold */}
