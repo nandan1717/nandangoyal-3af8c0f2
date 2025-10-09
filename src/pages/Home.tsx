@@ -43,62 +43,30 @@ const Home = () => {
             </div>
           </div>
 
-          {/* Stats Counter Section */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mb-16 sm:mb-20">
-            <div className="bg-card p-6 rounded-lg border border-border shadow-sm text-center hover:shadow-md hover:border-accent/50 transition-all duration-300 animate-fade-in">
-              <div className="text-3xl sm:text-4xl font-bold text-accent mb-2">10+</div>
-              <div className="text-xs sm:text-sm text-muted-foreground">Agile Sprints Delivered</div>
-            </div>
-            <div className="bg-card p-6 rounded-lg border border-border shadow-sm text-center hover:shadow-md hover:border-accent/50 transition-all duration-300 animate-fade-in" style={{ animationDelay: '0.1s' }}>
-              <div className="text-3xl sm:text-4xl font-bold text-accent mb-2">5</div>
-              <div className="text-xs sm:text-sm text-muted-foreground">Cross-Functional Teams</div>
-            </div>
-            <div className="bg-card p-6 rounded-lg border border-border shadow-sm text-center hover:shadow-md hover:border-accent/50 transition-all duration-300 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              <div className="text-3xl sm:text-4xl font-bold text-accent mb-2">70%</div>
-              <div className="text-xs sm:text-sm text-muted-foreground">Faster with AI Integration</div>
-            </div>
-            <div className="bg-card p-6 rounded-lg border border-border shadow-sm text-center hover:shadow-md hover:border-accent/50 transition-all duration-300 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-              <div className="text-3xl sm:text-4xl font-bold text-accent mb-2">150+</div>
-              <div className="text-xs sm:text-sm text-muted-foreground">Students Led at YU Club</div>
-            </div>
-            <div className="bg-card p-6 rounded-lg border border-border shadow-sm text-center hover:shadow-md hover:border-accent/50 transition-all duration-300 animate-fade-in" style={{ animationDelay: '0.4s' }}>
-              <div className="text-3xl sm:text-4xl font-bold text-accent mb-2">5000+</div>
-              <div className="text-xs sm:text-sm text-muted-foreground">5-Star Customer Service Ratings</div>
-            </div>
-          </div>
-
-          {/* Personal Story Section - Second Fold */}
-          <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center py-12 sm:py-16">
-            <div className="text-center md:text-left space-y-4 sm:space-y-6 order-2 md:order-1">
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground">
-                Beyond the Resume
-              </h2>
-
-              <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed">
-                I'm not here to show you a perfect version of myself. I'm here to show you the real one — 
-                the student, the dreamer, the late-night overthinker, the one who's hungry to build 
-                something bigger than himself.
-              </p>
-
-              <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed">
-                I'm Nandan — a 21-year-old figuring it out, hungry to grow, and building my own path 
-                through agile leadership, technical innovation, and relentless curiosity.
-              </p>
-
-              <div className="pt-2 sm:pt-4 text-xs sm:text-sm text-muted-foreground italic">
-                Not perfect, not finished, just real.
+          {/* Stats Counter Section - Single Card */}
+          <div className="bg-card p-8 sm:p-10 rounded-lg border-2 border-border shadow-lg mb-12 sm:mb-16 animate-fade-in">
+            <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-8 text-center">Impact at a Glance</h2>
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-6 sm:gap-8">
+              <div className="text-center">
+                <div className="text-3xl sm:text-4xl font-bold text-accent mb-2">10+</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">Agile Sprints Delivered</div>
               </div>
-            </div>
-
-            <div className="order-1 md:order-2 flex flex-col justify-center items-center gap-3 sm:gap-4">
-              <img 
-                src={gokuHappy} 
-                alt="Happy Goku character representing energy and determination" 
-                className="w-full max-w-[280px] sm:max-w-sm md:max-w-md h-auto object-contain hover:scale-105 transition-transform duration-300"
-              />
-              <p className="text-xs sm:text-sm md:text-base text-muted-foreground italic text-center max-w-md px-4">
-                I use Goku here because I'm driven by the same spirit of growth, resilience, and always pushing my own limits—just like him
-              </p>
+              <div className="text-center">
+                <div className="text-3xl sm:text-4xl font-bold text-accent mb-2">5</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">Cross-Functional Teams</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl sm:text-4xl font-bold text-accent mb-2">70%</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">Faster with AI Integration</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl sm:text-4xl font-bold text-accent mb-2">150+</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">Students Led at YU Club</div>
+              </div>
+              <div className="text-center col-span-2 md:col-span-1">
+                <div className="text-3xl sm:text-4xl font-bold text-accent mb-2">5000+</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">5-Star Customer Ratings</div>
+              </div>
             </div>
           </div>
         </div>
