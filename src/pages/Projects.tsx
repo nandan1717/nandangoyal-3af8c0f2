@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { Code, Briefcase, ExternalLink } from "lucide-react";
 import isybEcosystem from "@/assets/isyb-ecosystem.png";
 import isybEvents from "@/assets/isyb-events.png";
@@ -20,7 +21,7 @@ const Projects = () => {
       ],
       icon: Briefcase,
       status: "Feb 2025 – Mar 2026 (Remote, Burnaby, Canada)",
-      tech: "Agile, Jira, Stakeholder Management",
+      techStack: ["Agile", "Scrum", "Jira", "React", "TypeScript", "Supabase", "Tailwind CSS", "Figma"],
       link: "https://www.isupportyouprogram.com",
       screenshots: [isybEcosystem, isybEvents, isybPortfolio],
     },
@@ -34,7 +35,7 @@ const Projects = () => {
       ],
       icon: Code,
       status: "Mar 2023 – Present (Hybrid)",
-      tech: "HTML, CSS, JavaScript, Python/Flask, AI APIs",
+      techStack: ["React", "TypeScript", "Supabase", "Lovable AI", "shadcn/ui", "Tailwind CSS", "Python", "Flask"],
       links: [
         { url: "https://nandangoyal.me", label: "Portfolio Website" },
         { url: "https://yucreatorsclub.ca", label: "YU Creators Club" },
@@ -141,8 +142,18 @@ const Projects = () => {
                     )}
                     
                     <div className="pt-4 border-t border-border">
-                      <span className="text-sm font-semibold text-muted-foreground">Technologies: </span>
-                      <span className="text-sm text-accent font-medium">{project.tech}</span>
+                      <h4 className="font-semibold text-foreground mb-3">Technology Stack:</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {project.techStack.map((tech, techIdx) => (
+                          <Badge 
+                            key={techIdx} 
+                            variant="secondary"
+                            className="bg-accent/10 text-accent border border-accent/20 hover:bg-accent hover:text-accent-foreground transition-colors"
+                          >
+                            {tech}
+                          </Badge>
+                        ))}
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
