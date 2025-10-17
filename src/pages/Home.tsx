@@ -88,11 +88,11 @@ const Home = () => {
               </div>
               <div className="bg-accent/10 px-4 py-3 rounded-lg border border-accent/20 text-center">
                 <p className="font-semibold text-accent text-sm">Full Stack Web Development</p>
-                <p className="text-xs text-accent/70">Bangalore CE (2023)</p>
+                <p className="text-xs text-accent/70">Bangalore Computer Education (2023)</p>
               </div>
               <div className="bg-accent/10 px-4 py-3 rounded-lg border border-accent/20 text-center">
                 <p className="font-semibold text-accent text-sm">C and C++ Programming</p>
-                <p className="text-xs text-accent/70">Bangalore CE (2023)</p>
+                <p className="text-xs text-accent/70">Bangalore Computer Education (2023)</p>
               </div>
             </div>
           </div>
