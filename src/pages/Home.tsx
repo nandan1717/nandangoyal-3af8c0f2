@@ -102,34 +102,34 @@ const Home = () => {
       {/* Testimonials Section */}
       <section className="pt-8 pb-12 bg-muted/20">
         <div className="container mx-auto px-4 sm:px-6">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 text-foreground">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 text-foreground">
             What People Say
           </h2>
           
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-card p-6 sm:p-8 rounded-lg border shadow-sm">
-              <div className="mb-6">
-                <svg className="w-10 h-10 sm:w-12 sm:h-12 text-accent mb-4" fill="currentColor" viewBox="0 0 24 24">
+          <div className="max-w-3xl mx-auto">
+            <div className="bg-card p-5 sm:p-6 rounded-lg border shadow-sm">
+              <div className="mb-4">
+                <svg className="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                 </svg>
               </div>
               
-              <p className="text-sm sm:text-base md:text-lg text-foreground leading-relaxed mb-4 sm:mb-6">
+              <p className="text-sm sm:text-base text-foreground leading-relaxed mb-3">
                 I had the pleasure of teaching Nandan Goyal in my course HUMN422 – Topics in Technology and Society at Yorkville University during Summer of 2025, and I can attest to his professionalism, curiosity, and strong communication skills. From day one, he stood out in class. His presentations were not only well-prepared and clear but also engaging and confident—he has a real knack for making material accessible and interesting.
               </p>
               
-              <p className="text-sm sm:text-base md:text-lg text-foreground leading-relaxed mb-4 sm:mb-6">
+              <p className="text-sm sm:text-base text-foreground leading-relaxed mb-3">
                 What also impressed me was how naturally Nandan worked with his peers. It is a rarity in my experience of having taught for over a decade to see a student combine such strong academic performance with genuine openness to diverse perspectives. He collaborated seamlessly with classmates from diverse cultural and professional backgrounds, and his positive attitude and adaptability made him a real asset in our team-oriented learning environment.
               </p>
               
-              <p className="text-sm sm:text-base md:text-lg text-foreground leading-relaxed mb-4 sm:mb-6">
+              <p className="text-sm sm:text-base text-foreground leading-relaxed mb-4">
                 I have no doubt that Nandan will bring the same enthusiasm, thoughtfulness, and strong communication skills to his future roles. I can easily see him thriving in project management or leadership positions, where his ability to connect with people and keep teams moving forward will serve him well.
               </p>
               
-              <div className="border-t pt-4 sm:pt-6">
-                <p className="font-semibold text-foreground text-base sm:text-lg">Ismaeil Fazel, PhD</p>
-                <p className="text-sm sm:text-base text-muted-foreground">Professor, Liberal Arts</p>
-                <p className="text-sm sm:text-base text-muted-foreground">Yorkville University, BC Campus</p>
+              <div className="border-t pt-4">
+                <p className="font-semibold text-foreground text-sm sm:text-base">Ismaeil Fazel, PhD</p>
+                <p className="text-xs sm:text-sm text-muted-foreground">Professor, Liberal Arts</p>
+                <p className="text-xs sm:text-sm text-muted-foreground">Yorkville University, BC Campus</p>
               </div>
             </div>
           </div>
