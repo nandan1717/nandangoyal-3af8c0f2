@@ -69,6 +69,25 @@ const Home = () => {
               </div>
             </div>
           </div>
+
+          {/* Certifications Section */}
+          <div className="max-w-3xl mx-auto mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-6 text-center">Certifications</h2>
+            <div className="space-y-3">
+              <div className="bg-accent/5 p-4 rounded-lg border-l-4 border-accent">
+                <h3 className="font-semibold text-foreground">Microsoft Power Platform Fundamentals (PL-900)</h3>
+                <p className="text-sm text-muted-foreground">In Progress</p>
+              </div>
+              <div className="bg-accent/5 p-4 rounded-lg border-l-4 border-accent">
+                <h3 className="font-semibold text-foreground">Certified Associate in Project Management (CAPM)</h3>
+                <p className="text-sm text-muted-foreground">PMI - In Progress</p>
+              </div>
+              <div className="bg-accent/5 p-4 rounded-lg border-l-4 border-accent">
+                <h3 className="font-semibold text-foreground">Digital Transformation</h3>
+                <p className="text-sm text-muted-foreground">University of Waterloo - October 17, 2025 to December 14, 2025</p>
+              </div>
+            </div>
+          </div>
         </div>
       </main>
 
