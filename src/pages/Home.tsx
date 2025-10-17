@@ -86,6 +86,14 @@ const Home = () => {
                 <span className="font-semibold text-foreground">Digital Transformation</span>
                 <span className="text-muted-foreground text-sm ml-2">- UWaterloo (Oct-Dec 2025)</span>
               </div>
+              <div className="flex-shrink-0 bg-accent/5 px-6 py-3 rounded-lg border border-accent/20 whitespace-nowrap">
+                <span className="font-semibold text-foreground">Full Stack Web Development</span>
+                <span className="text-muted-foreground text-sm ml-2">- Bangalore Computer Education (2023)</span>
+              </div>
+              <div className="flex-shrink-0 bg-accent/5 px-6 py-3 rounded-lg border border-accent/20 whitespace-nowrap">
+                <span className="font-semibold text-foreground">C and C++ Programming</span>
+                <span className="text-muted-foreground text-sm ml-2">- Bangalore Computer Education (2023)</span>
+              </div>
             </div>
           </div>
         </div>
