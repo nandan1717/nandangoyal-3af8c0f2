@@ -17,27 +17,27 @@ const Testimonials = () => {
             I don't have hundreds of testimonials. But the ones I do have? They matter because they're real.
           </p>
 
-          <div className="bg-card p-8 rounded-lg border-2 border-border shadow-sm">
-            <div className="mb-6">
-              <Quote className="w-12 h-12 text-accent mb-4" />
+          <div className="bg-card p-5 sm:p-6 rounded-lg border shadow-sm">
+            <div className="mb-4">
+              <Quote className="w-8 h-8 text-accent" />
             </div>
             
-            <p className="text-lg text-foreground leading-relaxed mb-6">
+            <p className="text-sm sm:text-base text-foreground leading-relaxed mb-3">
               I had the pleasure of teaching Nandan Goyal in my course HUMN422 – Topics in Technology and Society at Yorkville University during Summer of 2025, and I can attest to his professionalism, curiosity, and strong communication skills. From day one, he stood out in class. His presentations were not only well-prepared and clear but also engaging and confident—he has a real knack for making material accessible and interesting.
             </p>
             
-            <p className="text-lg text-foreground leading-relaxed mb-6">
+            <p className="text-sm sm:text-base text-foreground leading-relaxed mb-3">
               What also impressed me was how naturally Nandan worked with his peers. It is a rarity in my experience of having taught for over a decade to see a student combine such strong academic performance with genuine openness to diverse perspectives. He collaborated seamlessly with classmates from diverse cultural and professional backgrounds, and his positive attitude and adaptability made him a real asset in our team-oriented learning environment.
             </p>
             
-            <p className="text-lg text-foreground leading-relaxed mb-6">
+            <p className="text-sm sm:text-base text-foreground leading-relaxed mb-4">
               I have no doubt that Nandan will bring the same enthusiasm, thoughtfulness, and strong communication skills to his future roles. I can easily see him thriving in project management or leadership positions, where his ability to connect with people and keep teams moving forward will serve him well.
             </p>
             
-            <div className="border-t pt-6 mt-8">
-              <p className="font-semibold text-foreground text-xl">Ismaeil Fazel, PhD</p>
-              <p className="text-muted-foreground">Professor, Liberal Arts</p>
-              <p className="text-muted-foreground">Yorkville University, BC Campus</p>
+            <div className="border-t pt-4">
+              <p className="font-semibold text-foreground text-sm sm:text-base">Ismaeil Fazel, PhD</p>
+              <p className="text-xs sm:text-sm text-muted-foreground">Professor, Liberal Arts</p>
+              <p className="text-xs sm:text-sm text-muted-foreground">Yorkville University, BC Campus</p>
             </div>
           </div>
 
