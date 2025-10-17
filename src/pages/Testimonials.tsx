@@ -4,21 +4,12 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Quote } from "lucide-react";
 
 const Testimonials = () => {
-  const testimonials = [
-    {
-      name: "Team Member",
-      role: "Creators Club",
-      company: "Yorkville University",
-      text: "Nandan is a creative leader and reliable teammate who led the Creators Club to launch our university's official student site and increase engagement through multiple events.",
-    },
-  ];
-
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
       
       <main className="container mx-auto px-6 pt-32 pb-20">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground text-center">
             What People Say
           </h1>
@@ -26,30 +17,28 @@ const Testimonials = () => {
             I don't have hundreds of testimonials. But the ones I do have? They matter because they're real.
           </p>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="border-2 hover:border-accent transition-colors">
-                <CardHeader>
-                  <Quote className="w-10 h-10 text-accent mb-4" />
-                  <div>
-                    <h3 className="text-xl font-bold text-foreground">
-                      {testimonial.name}
-                    </h3>
-                    <p className="text-sm text-muted-foreground">
-                      {testimonial.role}
-                    </p>
-                    <p className="text-sm text-accent font-semibold">
-                      {testimonial.company}
-                    </p>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-base text-foreground/90 leading-relaxed italic">
-                    "{testimonial.text}"
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="bg-card p-8 rounded-lg border-2 border-border shadow-sm">
+            <div className="mb-6">
+              <Quote className="w-12 h-12 text-accent mb-4" />
+            </div>
+            
+            <p className="text-lg text-foreground leading-relaxed mb-6">
+              I had the pleasure of teaching Nandan Goyal in my course HUMN422 – Topics in Technology and Society at Yorkville University during Summer of 2025, and I can attest to his professionalism, curiosity, and strong communication skills. From day one, he stood out in class. His presentations were not only well-prepared and clear but also engaging and confident—he has a real knack for making material accessible and interesting.
+            </p>
+            
+            <p className="text-lg text-foreground leading-relaxed mb-6">
+              What also impressed me was how naturally Nandan worked with his peers. It is a rarity in my experience of having taught for over a decade to see a student combine such strong academic performance with genuine openness to diverse perspectives. He collaborated seamlessly with classmates from diverse cultural and professional backgrounds, and his positive attitude and adaptability made him a real asset in our team-oriented learning environment.
+            </p>
+            
+            <p className="text-lg text-foreground leading-relaxed mb-6">
+              I have no doubt that Nandan will bring the same enthusiasm, thoughtfulness, and strong communication skills to his future roles. I can easily see him thriving in project management or leadership positions, where his ability to connect with people and keep teams moving forward will serve him well.
+            </p>
+            
+            <div className="border-t pt-6 mt-8">
+              <p className="font-semibold text-foreground text-xl">Ismaeil Fazel, PhD</p>
+              <p className="text-muted-foreground">Professor, Liberal Arts</p>
+              <p className="text-muted-foreground">Yorkville University, BC Campus</p>
+            </div>
           </div>
 
           <div className="mt-16 text-center">
