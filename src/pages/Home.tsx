@@ -84,7 +84,7 @@ const Home = () => {
               </div>
               <div className="bg-accent/5 px-4 py-3 rounded-lg border border-accent/20 text-center">
                 <p className="font-semibold text-foreground text-sm">Digital Transformation</p>
-                <p className="text-xs text-muted-foreground">UWaterloo (Oct-Dec 2025)</p>
+                <p className="text-xs text-muted-foreground">University of Waterloo (Oct-Dec 2025)</p>
               </div>
               <div className="bg-accent/5 px-4 py-3 rounded-lg border border-accent/20 text-center">
                 <p className="font-semibold text-foreground text-sm">Full Stack Web Development</p>
