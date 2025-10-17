@@ -70,21 +70,36 @@ const Home = () => {
             </div>
           </div>
 
-          {/* Certifications Section */}
-          <div className="max-w-3xl mx-auto mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-6 text-center">Certifications</h2>
-            <div className="space-y-3">
-              <div className="bg-accent/5 p-4 rounded-lg border-l-4 border-accent">
-                <h3 className="font-semibold text-foreground">Microsoft Power Platform Fundamentals (PL-900)</h3>
-                <p className="text-sm text-muted-foreground">In Progress</p>
-              </div>
-              <div className="bg-accent/5 p-4 rounded-lg border-l-4 border-accent">
-                <h3 className="font-semibold text-foreground">Certified Associate in Project Management (CAPM)</h3>
-                <p className="text-sm text-muted-foreground">PMI - In Progress</p>
-              </div>
-              <div className="bg-accent/5 p-4 rounded-lg border-l-4 border-accent">
-                <h3 className="font-semibold text-foreground">Digital Transformation</h3>
-                <p className="text-sm text-muted-foreground">University of Waterloo - October 17, 2025 to December 14, 2025</p>
+          {/* Certifications Ticker */}
+          <div className="mb-8 sm:mb-12 overflow-hidden">
+            <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4 text-center">Certifications</h2>
+            <div className="relative">
+              <div className="flex animate-scroll gap-4">
+                <div className="flex-shrink-0 bg-accent/5 px-6 py-3 rounded-lg border border-accent/20 whitespace-nowrap">
+                  <span className="font-semibold text-foreground">Microsoft Power Platform Fundamentals (PL-900)</span>
+                  <span className="text-muted-foreground text-sm ml-2">- In Progress</span>
+                </div>
+                <div className="flex-shrink-0 bg-accent/5 px-6 py-3 rounded-lg border border-accent/20 whitespace-nowrap">
+                  <span className="font-semibold text-foreground">CAPM</span>
+                  <span className="text-muted-foreground text-sm ml-2">- PMI (In Progress)</span>
+                </div>
+                <div className="flex-shrink-0 bg-accent/5 px-6 py-3 rounded-lg border border-accent/20 whitespace-nowrap">
+                  <span className="font-semibold text-foreground">Digital Transformation</span>
+                  <span className="text-muted-foreground text-sm ml-2">- UWaterloo (Oct-Dec 2025)</span>
+                </div>
+                {/* Duplicate for seamless loop */}
+                <div className="flex-shrink-0 bg-accent/5 px-6 py-3 rounded-lg border border-accent/20 whitespace-nowrap">
+                  <span className="font-semibold text-foreground">Microsoft Power Platform Fundamentals (PL-900)</span>
+                  <span className="text-muted-foreground text-sm ml-2">- In Progress</span>
+                </div>
+                <div className="flex-shrink-0 bg-accent/5 px-6 py-3 rounded-lg border border-accent/20 whitespace-nowrap">
+                  <span className="font-semibold text-foreground">CAPM</span>
+                  <span className="text-muted-foreground text-sm ml-2">- PMI (In Progress)</span>
+                </div>
+                <div className="flex-shrink-0 bg-accent/5 px-6 py-3 rounded-lg border border-accent/20 whitespace-nowrap">
+                  <span className="font-semibold text-foreground">Digital Transformation</span>
+                  <span className="text-muted-foreground text-sm ml-2">- UWaterloo (Oct-Dec 2025)</span>
+                </div>
               </div>
             </div>
           </div>
