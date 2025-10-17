@@ -70,29 +70,29 @@ const Home = () => {
             </div>
           </div>
 
-          {/* Certifications Ticker */}
-          <div className="mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-4 text-center">Certifications</h2>
-            <div className="flex flex-wrap justify-center gap-4">
-              <div className="flex-shrink-0 bg-accent/5 px-6 py-3 rounded-lg border border-accent/20 whitespace-nowrap">
-                <span className="font-semibold text-foreground">Microsoft Power Platform Fundamentals (PL-900)</span>
-                <span className="text-muted-foreground text-sm ml-2">- In Progress</span>
+          {/* Certifications */}
+          <div className="mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-6 text-center">Certifications</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 max-w-5xl mx-auto">
+              <div className="bg-accent/5 px-4 py-3 rounded-lg border border-accent/20 text-center">
+                <p className="font-semibold text-foreground text-sm">Microsoft Power Platform (PL-900)</p>
+                <p className="text-xs text-muted-foreground">In Progress</p>
               </div>
-              <div className="flex-shrink-0 bg-accent/5 px-6 py-3 rounded-lg border border-accent/20 whitespace-nowrap">
-                <span className="font-semibold text-foreground">CAPM</span>
-                <span className="text-muted-foreground text-sm ml-2">- PMI (In Progress)</span>
+              <div className="bg-accent/5 px-4 py-3 rounded-lg border border-accent/20 text-center">
+                <p className="font-semibold text-foreground text-sm">CAPM</p>
+                <p className="text-xs text-muted-foreground">PMI - In Progress</p>
               </div>
-              <div className="flex-shrink-0 bg-accent/5 px-6 py-3 rounded-lg border border-accent/20 whitespace-nowrap">
-                <span className="font-semibold text-foreground">Digital Transformation</span>
-                <span className="text-muted-foreground text-sm ml-2">- UWaterloo (Oct-Dec 2025)</span>
+              <div className="bg-accent/5 px-4 py-3 rounded-lg border border-accent/20 text-center">
+                <p className="font-semibold text-foreground text-sm">Digital Transformation</p>
+                <p className="text-xs text-muted-foreground">UWaterloo (Oct-Dec 2025)</p>
               </div>
-              <div className="flex-shrink-0 bg-accent/5 px-6 py-3 rounded-lg border border-accent/20 whitespace-nowrap">
-                <span className="font-semibold text-foreground">Full Stack Web Development</span>
-                <span className="text-muted-foreground text-sm ml-2">- Bangalore Computer Education (2023)</span>
+              <div className="bg-accent/5 px-4 py-3 rounded-lg border border-accent/20 text-center">
+                <p className="font-semibold text-foreground text-sm">Full Stack Web Development</p>
+                <p className="text-xs text-muted-foreground">Bangalore CE (2023)</p>
               </div>
-              <div className="flex-shrink-0 bg-accent/5 px-6 py-3 rounded-lg border border-accent/20 whitespace-nowrap">
-                <span className="font-semibold text-foreground">C and C++ Programming</span>
-                <span className="text-muted-foreground text-sm ml-2">- Bangalore Computer Education (2023)</span>
+              <div className="bg-accent/5 px-4 py-3 rounded-lg border border-accent/20 text-center">
+                <p className="font-semibold text-foreground text-sm">C and C++ Programming</p>
+                <p className="text-xs text-muted-foreground">Bangalore CE (2023)</p>
               </div>
             </div>
           </div>
@@ -100,7 +100,7 @@ const Home = () => {
       </main>
 
       {/* Testimonials Section */}
-      <section className="py-8 sm:py-12 bg-muted/20">
+      <section className="py-12 bg-muted/20">
         <div className="container mx-auto px-4 sm:px-6">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 text-foreground">
             What People Say
