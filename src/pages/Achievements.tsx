@@ -83,7 +83,7 @@ const Achievements = () => {
 
                 <div className="bg-accent/10 p-6 rounded-lg border-l-4 border-accent">
                   <h3 className="text-xl font-semibold text-foreground mb-2">Digital Transformation</h3>
-                  <p className="text-muted-foreground">University of Waterloo - In Progress</p>
+                  <p className="text-muted-foreground">University of Waterloo - October 17, 2025 to December 14, 2025</p>
                 </div>
 
                 <div className="bg-accent/10 p-6 rounded-lg border-l-4 border-accent">
