@@ -9,7 +9,7 @@ const Home = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       
-      <main className="container mx-auto px-4 sm:px-6 pt-20 sm:pt-24 pb-16 sm:pb-20">
+      <main className="container mx-auto px-4 sm:px-6 pt-20 sm:pt-24 pb-0">
         <div className="max-w-7xl mx-auto">
           {/* Professional Banner */}
           <div className="mb-8 sm:mb-12 text-center">
@@ -100,7 +100,7 @@ const Home = () => {
       </main>
 
       {/* Testimonials Section */}
-      <section className="py-12 bg-muted/20">
+      <section className="pt-8 pb-12 bg-muted/20">
         <div className="container mx-auto px-4 sm:px-6">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 text-foreground">
             What People Say
