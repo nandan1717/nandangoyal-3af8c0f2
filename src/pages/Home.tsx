@@ -74,25 +74,25 @@ const Home = () => {
           <div className="mb-8">
             <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-6 text-center">Certifications</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 max-w-5xl mx-auto">
-              <div className="bg-card px-4 py-3 rounded-lg border shadow-sm text-center">
-                <p className="font-semibold text-foreground text-sm">Microsoft Power Platform (PL-900)</p>
-                <p className="text-xs text-muted-foreground">In Progress</p>
+              <div className="bg-accent/10 px-4 py-3 rounded-lg border border-accent/20 text-center">
+                <p className="font-semibold text-accent text-sm">Microsoft Power Platform (PL-900)</p>
+                <p className="text-xs text-accent/70">In Progress</p>
               </div>
-              <div className="bg-card px-4 py-3 rounded-lg border shadow-sm text-center">
-                <p className="font-semibold text-foreground text-sm">CAPM</p>
-                <p className="text-xs text-muted-foreground">PMI - In Progress</p>
+              <div className="bg-accent/10 px-4 py-3 rounded-lg border border-accent/20 text-center">
+                <p className="font-semibold text-accent text-sm">CAPM</p>
+                <p className="text-xs text-accent/70">PMI - In Progress</p>
               </div>
-              <div className="bg-card px-4 py-3 rounded-lg border shadow-sm text-center">
-                <p className="font-semibold text-foreground text-sm">Digital Transformation</p>
-                <p className="text-xs text-muted-foreground">University of Waterloo (Oct-Dec 2025)</p>
+              <div className="bg-accent/10 px-4 py-3 rounded-lg border border-accent/20 text-center">
+                <p className="font-semibold text-accent text-sm">Digital Transformation</p>
+                <p className="text-xs text-accent/70">University of Waterloo (Oct-Dec 2025)</p>
               </div>
-              <div className="bg-card px-4 py-3 rounded-lg border shadow-sm text-center">
-                <p className="font-semibold text-foreground text-sm">Full Stack Web Development</p>
-                <p className="text-xs text-muted-foreground">Bangalore CE (2023)</p>
+              <div className="bg-accent/10 px-4 py-3 rounded-lg border border-accent/20 text-center">
+                <p className="font-semibold text-accent text-sm">Full Stack Web Development</p>
+                <p className="text-xs text-accent/70">Bangalore CE (2023)</p>
               </div>
-              <div className="bg-card px-4 py-3 rounded-lg border shadow-sm text-center">
-                <p className="font-semibold text-foreground text-sm">C and C++ Programming</p>
-                <p className="text-xs text-muted-foreground">Bangalore CE (2023)</p>
+              <div className="bg-accent/10 px-4 py-3 rounded-lg border border-accent/20 text-center">
+                <p className="font-semibold text-accent text-sm">C and C++ Programming</p>
+                <p className="text-xs text-accent/70">Bangalore CE (2023)</p>
               </div>
             </div>
           </div>
