@@ -106,7 +106,66 @@ const Home = () => {
             What People Say
           </h2>
           
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-3xl mx-auto max-h-[600px] overflow-y-auto space-y-6 pr-2">
+            {/* Kaustav Ghosh Testimonial */}
+            <div className="bg-card p-5 sm:p-6 rounded-lg border shadow-sm">
+              <div className="mb-4">
+                <svg className="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                </svg>
+              </div>
+              
+              <p className="text-sm sm:text-base text-foreground leading-relaxed mb-3">
+                Nandan - thank you so much for the collaborative approach you showcased towards any TECH or IT related tasks we gave you at I Support Your Business. Your understanding and skills are really worth any organisation who will be hosting you in the future.
+              </p>
+              
+              <p className="text-sm sm:text-base text-foreground leading-relaxed mb-3">
+                Thanks for shaping our backend systems at #ISupportYourBusiness. We look forward to your continued partnership with us.
+              </p>
+              
+              <p className="text-sm sm:text-base text-foreground leading-relaxed mb-4">
+                Wishing you all the best for all your future endeavours! Good Luck! Cheers!!!
+              </p>
+              
+              <div className="border-t pt-4">
+                <p className="font-semibold text-foreground text-sm sm:text-base">Kaustav Ghosh</p>
+                <p className="text-xs sm:text-sm text-muted-foreground">COACH | Counselor | Business Consultant | Storytelling Evangelist</p>
+                <p className="text-xs sm:text-sm text-muted-foreground">Founder - I Support Your Business (ISYB)</p>
+              </div>
+            </div>
+
+            {/* MN Garg Trading Testimonial */}
+            <div className="bg-card p-5 sm:p-6 rounded-lg border shadow-sm">
+              <div className="mb-4">
+                <svg className="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                </svg>
+              </div>
+              
+              <p className="text-sm sm:text-base text-foreground leading-relaxed mb-3">
+                I recently had the pleasure of working with Nandan Goyal on the creation of the MN Garg Trading Company's website, www.mngarg.com, and I have nothing but positive things to say about the experience.
+              </p>
+              
+              <p className="text-sm sm:text-base text-foreground leading-relaxed mb-3">
+                Nandan Goyal's expertise in website design and development was evident throughout the entire process. He was extremely professional, detail-oriented, and easy to work with. He took the time to understand our business needs and goals and incorporated them into the website design seamlessly.
+              </p>
+              
+              <p className="text-sm sm:text-base text-foreground leading-relaxed mb-3">
+                Thanks to Nandan Goyal's hard work and dedication, the website for MN Garg Trading Company is now a beautiful and user-friendly online platform for our customers to browse our products. His attention to details and responsiveness to our needs were exceptional.
+              </p>
+              
+              <p className="text-sm sm:text-base text-foreground leading-relaxed mb-4">
+                Overall, I highly recommend Nandan Goyal to anyone in need of website design and development services. His skills, professionalism, and commitment to excellence are unmatched.
+              </p>
+              
+              <div className="border-t pt-4">
+                <p className="font-semibold text-foreground text-sm sm:text-base">M. N. GARG TRADING CO.</p>
+                <p className="text-xs sm:text-sm text-muted-foreground">Wholesale Suppliers of Nut-Bolts, Nails & Hardware Items</p>
+                <p className="text-xs sm:text-sm text-muted-foreground">Bathinda, Punjab</p>
+              </div>
+            </div>
+
+            {/* Ismaeil Fazel Testimonial */}
             <div className="bg-card p-5 sm:p-6 rounded-lg border shadow-sm">
               <div className="mb-4">
                 <svg className="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 24 24">

@@ -23,6 +23,30 @@ const Testimonials = () => {
                 <Quote className="w-8 h-8 text-accent" />
               </div>
               
+              <p className="text-sm sm:text-base text-foreground leading-relaxed mb-4">
+                Nandan - thank you so much for the collaborative approach you showcased towards any TECH or IT related tasks we gave you at I Support Your Business. Your understanding and skills are really worth any organisation who will be hosting you in the future.
+              </p>
+              
+              <p className="text-sm sm:text-base text-foreground leading-relaxed mb-4">
+                Thanks for shaping our backend systems at #ISupportYourBusiness. We look forward to your continued partnership with us.
+              </p>
+              
+              <p className="text-sm sm:text-base text-foreground leading-relaxed mb-4">
+                Wishing you all the best for all your future endeavours! Good Luck! Cheers!!!
+              </p>
+              
+              <div className="border-t pt-4">
+                <p className="font-semibold text-foreground text-sm sm:text-base">Kaustav Ghosh</p>
+                <p className="text-xs sm:text-sm text-muted-foreground">COACH | Counselor | Business Consultant | Storytelling Evangelist</p>
+                <p className="text-xs sm:text-sm text-muted-foreground">Founder - I Support Your Business (ISYB)</p>
+              </div>
+            </div>
+
+            <div className="bg-card p-5 sm:p-6 rounded-lg border shadow-sm">
+              <div className="mb-4">
+                <Quote className="w-8 h-8 text-accent" />
+              </div>
+              
               <p className="text-sm sm:text-base text-foreground leading-relaxed mb-3">
                 I recently had the pleasure of working with Nandan Goyal on the creation of the MN Garg Trading Company's website, www.mngarg.com, and I have nothing but positive things to say about the experience.
               </p>
