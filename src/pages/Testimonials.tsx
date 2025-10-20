@@ -17,27 +17,57 @@ const Testimonials = () => {
             I don't have hundreds of testimonials. But the ones I do have? They matter because they're real.
           </p>
 
-          <div className="bg-card p-5 sm:p-6 rounded-lg border shadow-sm">
-            <div className="mb-4">
-              <Quote className="w-8 h-8 text-accent" />
+          <div className="space-y-8">
+            <div className="bg-card p-5 sm:p-6 rounded-lg border shadow-sm">
+              <div className="mb-4">
+                <Quote className="w-8 h-8 text-accent" />
+              </div>
+              
+              <p className="text-sm sm:text-base text-foreground leading-relaxed mb-3">
+                I recently had the pleasure of working with Nandan Goyal on the creation of the MN Garg Trading Company's website, www.mngarg.com, and I have nothing but positive things to say about the experience.
+              </p>
+              
+              <p className="text-sm sm:text-base text-foreground leading-relaxed mb-3">
+                Nandan Goyal's expertise in website design and development was evident throughout the entire process. He was extremely professional, detail-oriented, and easy to work with. He took the time to understand our business needs and goals and incorporated them into the website design seamlessly.
+              </p>
+              
+              <p className="text-sm sm:text-base text-foreground leading-relaxed mb-3">
+                Thanks to Nandan Goyal's hard work and dedication, the website for MN Garg Trading Company is now a beautiful and user-friendly online platform for our customers to browse our products. His attention to details and responsiveness to our needs were exceptional.
+              </p>
+              
+              <p className="text-sm sm:text-base text-foreground leading-relaxed mb-4">
+                Overall, I highly recommend Nandan Goyal to anyone in need of website design and development services. His skills, professionalism, and commitment to excellence are unmatched.
+              </p>
+              
+              <div className="border-t pt-4">
+                <p className="font-semibold text-foreground text-sm sm:text-base">M. N. GARG TRADING CO.</p>
+                <p className="text-xs sm:text-sm text-muted-foreground">Wholesale Suppliers of Nut-Bolts, Nails & Hardware Items</p>
+                <p className="text-xs sm:text-sm text-muted-foreground">Bathinda, Punjab</p>
+              </div>
             </div>
-            
-            <p className="text-sm sm:text-base text-foreground leading-relaxed mb-3">
-              I had the pleasure of teaching Nandan Goyal in my course HUMN422 – Topics in Technology and Society at Yorkville University during Summer of 2025, and I can attest to his professionalism, curiosity, and strong communication skills. From day one, he stood out in class. His presentations were not only well-prepared and clear but also engaging and confident—he has a real knack for making material accessible and interesting.
-            </p>
-            
-            <p className="text-sm sm:text-base text-foreground leading-relaxed mb-3">
-              What also impressed me was how naturally Nandan worked with his peers. It is a rarity in my experience of having taught for over a decade to see a student combine such strong academic performance with genuine openness to diverse perspectives. He collaborated seamlessly with classmates from diverse cultural and professional backgrounds, and his positive attitude and adaptability made him a real asset in our team-oriented learning environment.
-            </p>
-            
-            <p className="text-sm sm:text-base text-foreground leading-relaxed mb-4">
-              I have no doubt that Nandan will bring the same enthusiasm, thoughtfulness, and strong communication skills to his future roles. I can easily see him thriving in project management or leadership positions, where his ability to connect with people and keep teams moving forward will serve him well.
-            </p>
-            
-            <div className="border-t pt-4">
-              <p className="font-semibold text-foreground text-sm sm:text-base">Ismaeil Fazel, PhD</p>
-              <p className="text-xs sm:text-sm text-muted-foreground">Professor, Liberal Arts</p>
-              <p className="text-xs sm:text-sm text-muted-foreground">Yorkville University, BC Campus</p>
+
+            <div className="bg-card p-5 sm:p-6 rounded-lg border shadow-sm">
+              <div className="mb-4">
+                <Quote className="w-8 h-8 text-accent" />
+              </div>
+              
+              <p className="text-sm sm:text-base text-foreground leading-relaxed mb-3">
+                I had the pleasure of teaching Nandan Goyal in my course HUMN422 – Topics in Technology and Society at Yorkville University during Summer of 2025, and I can attest to his professionalism, curiosity, and strong communication skills. From day one, he stood out in class. His presentations were not only well-prepared and clear but also engaging and confident—he has a real knack for making material accessible and interesting.
+              </p>
+              
+              <p className="text-sm sm:text-base text-foreground leading-relaxed mb-3">
+                What also impressed me was how naturally Nandan worked with his peers. It is a rarity in my experience of having taught for over a decade to see a student combine such strong academic performance with genuine openness to diverse perspectives. He collaborated seamlessly with classmates from diverse cultural and professional backgrounds, and his positive attitude and adaptability made him a real asset in our team-oriented learning environment.
+              </p>
+              
+              <p className="text-sm sm:text-base text-foreground leading-relaxed mb-4">
+                I have no doubt that Nandan will bring the same enthusiasm, thoughtfulness, and strong communication skills to his future roles. I can easily see him thriving in project management or leadership positions, where his ability to connect with people and keep teams moving forward will serve him well.
+              </p>
+              
+              <div className="border-t pt-4">
+                <p className="font-semibold text-foreground text-sm sm:text-base">Ismaeil Fazel, PhD</p>
+                <p className="text-xs sm:text-sm text-muted-foreground">Professor, Liberal Arts</p>
+                <p className="text-xs sm:text-sm text-muted-foreground">Yorkville University, BC Campus</p>
+              </div>
             </div>
           </div>
 
