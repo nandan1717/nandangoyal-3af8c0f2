@@ -108,7 +108,7 @@ const Home = () => {
           
           <div className="overflow-x-auto pb-4">
             <div className="flex gap-6 min-w-max px-2">
-              {/* Kaustav Ghosh Testimonial */}
+              {/* Ismaeil Fazel Testimonial */}
               <div className="bg-card p-5 sm:p-6 rounded-lg border shadow-sm w-[350px] sm:w-[450px] flex-shrink-0">
                 <div className="mb-4">
                   <svg className="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 24 24">
@@ -117,21 +117,21 @@ const Home = () => {
                 </div>
                 
                 <p className="text-sm sm:text-base text-foreground leading-relaxed mb-3">
-                  Nandan - thank you so much for the collaborative approach you showcased towards any TECH or IT related tasks we gave you at I Support Your Business. Your understanding and skills are really worth any organisation who will be hosting you in the future.
+                  I had the pleasure of teaching Nandan Goyal in my course HUMN422 – Topics in Technology and Society at Yorkville University during Summer of 2025, and I can attest to his professionalism, curiosity, and strong communication skills. From day one, he stood out in class. His presentations were not only well-prepared and clear but also engaging and confident—he has a real knack for making material accessible and interesting.
                 </p>
                 
                 <p className="text-sm sm:text-base text-foreground leading-relaxed mb-3">
-                  Thanks for shaping our backend systems at #ISupportYourBusiness. We look forward to your continued partnership with us.
+                  What also impressed me was how naturally Nandan worked with his peers. It is a rarity in my experience of having taught for over a decade to see a student combine such strong academic performance with genuine openness to diverse perspectives. He collaborated seamlessly with classmates from diverse cultural and professional backgrounds, and his positive attitude and adaptability made him a real asset in our team-oriented learning environment.
                 </p>
                 
                 <p className="text-sm sm:text-base text-foreground leading-relaxed mb-4">
-                  Wishing you all the best for all your future endeavours! Good Luck! Cheers!!!
+                  I have no doubt that Nandan will bring the same enthusiasm, thoughtfulness, and strong communication skills to his future roles. I can easily see him thriving in project management or leadership positions, where his ability to connect with people and keep teams moving forward will serve him well.
                 </p>
                 
                 <div className="border-t pt-4">
-                  <p className="font-semibold text-foreground text-sm sm:text-base">Kaustav Ghosh</p>
-                  <p className="text-xs sm:text-sm text-muted-foreground">COACH | Counselor | Business Consultant | Storytelling Evangelist</p>
-                  <p className="text-xs sm:text-sm text-muted-foreground">Founder - I Support Your Business (ISYB)</p>
+                  <p className="font-semibold text-foreground text-sm sm:text-base">Ismaeil Fazel, PhD</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground">Professor, Liberal Arts</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground">Yorkville University, BC Campus</p>
                 </div>
               </div>
 
@@ -166,7 +166,7 @@ const Home = () => {
                 </div>
               </div>
 
-              {/* Ismaeil Fazel Testimonial */}
+              {/* Kaustav Ghosh Testimonial */}
               <div className="bg-card p-5 sm:p-6 rounded-lg border shadow-sm w-[350px] sm:w-[450px] flex-shrink-0">
                 <div className="mb-4">
                   <svg className="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 24 24">
@@ -175,21 +175,21 @@ const Home = () => {
                 </div>
                 
                 <p className="text-sm sm:text-base text-foreground leading-relaxed mb-3">
-                  I had the pleasure of teaching Nandan Goyal in my course HUMN422 – Topics in Technology and Society at Yorkville University during Summer of 2025, and I can attest to his professionalism, curiosity, and strong communication skills. From day one, he stood out in class. His presentations were not only well-prepared and clear but also engaging and confident—he has a real knack for making material accessible and interesting.
+                  Nandan - thank you so much for the collaborative approach you showcased towards any TECH or IT related tasks we gave you at I Support Your Business. Your understanding and skills are really worth any organisation who will be hosting you in the future.
                 </p>
                 
                 <p className="text-sm sm:text-base text-foreground leading-relaxed mb-3">
-                  What also impressed me was how naturally Nandan worked with his peers. It is a rarity in my experience of having taught for over a decade to see a student combine such strong academic performance with genuine openness to diverse perspectives. He collaborated seamlessly with classmates from diverse cultural and professional backgrounds, and his positive attitude and adaptability made him a real asset in our team-oriented learning environment.
+                  Thanks for shaping our backend systems at #ISupportYourBusiness. We look forward to your continued partnership with us.
                 </p>
                 
                 <p className="text-sm sm:text-base text-foreground leading-relaxed mb-4">
-                  I have no doubt that Nandan will bring the same enthusiasm, thoughtfulness, and strong communication skills to his future roles. I can easily see him thriving in project management or leadership positions, where his ability to connect with people and keep teams moving forward will serve him well.
+                  Wishing you all the best for all your future endeavours! Good Luck! Cheers!!!
                 </p>
                 
                 <div className="border-t pt-4">
-                  <p className="font-semibold text-foreground text-sm sm:text-base">Ismaeil Fazel, PhD</p>
-                  <p className="text-xs sm:text-sm text-muted-foreground">Professor, Liberal Arts</p>
-                  <p className="text-xs sm:text-sm text-muted-foreground">Yorkville University, BC Campus</p>
+                  <p className="font-semibold text-foreground text-sm sm:text-base">Kaustav Ghosh</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground">COACH | Counselor | Business Consultant | Storytelling Evangelist</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground">Founder - I Support Your Business (ISYB)</p>
                 </div>
               </div>
             </div>
