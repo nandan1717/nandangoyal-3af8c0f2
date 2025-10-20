@@ -43,7 +43,20 @@ const Journey = () => {
     {
       date: "February 2025 - Present",
       title: "Project Management Intern at I Support Your Business",
-      description: "Leading end-to-end platform development (www.isupportyouprogram.com), implementing Jira for the organization, and managing Agile sprints across 5 departments.",
+      description: (
+        <>
+          Leading end-to-end platform development (
+          <a 
+            href="https://www.isupportyouprogram.com" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-accent hover:underline"
+          >
+            www.isupportyouprogram.com
+          </a>
+          ), implementing Jira for the organization, and managing Agile sprints across 5 departments.
+        </>
+      ),
       icon: Briefcase,
     },
     {
