@@ -144,7 +144,7 @@ const Home = () => {
                 </div>
                 
                 <p className="text-sm sm:text-base text-foreground leading-relaxed mb-3">
-                  I recently had the pleasure of working with Nandan Goyal on the creation of the MN Garg Trading Company's website, www.mngarg.com, and I have nothing but positive things to say about the experience.
+                  I recently had the pleasure of working with Nandan Goyal on the creation of the MN Garg Trading Company's website, <a href="https://www.mngarg.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">www.mngarg.com</a>, and I have nothing but positive things to say about the experience.
                 </p>
                 
                 <p className="text-sm sm:text-base text-foreground leading-relaxed mb-3">

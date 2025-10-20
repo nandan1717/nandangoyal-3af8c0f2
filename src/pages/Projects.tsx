@@ -39,7 +39,8 @@ const Projects = () => {
       links: [
         { url: "https://nandangoyal.me", label: "Portfolio Website" },
         { url: "https://yucreatorsclub.ca", label: "YU Creators Club" },
-        { url: "https://www.isupportyouprogram.com", label: "I Support Your Business" }
+        { url: "https://www.isupportyouprogram.com", label: "I Support Your Business" },
+        { url: "https://www.mngarg.com", label: "MN Garg Trading Co." }
       ]
     },
   ];

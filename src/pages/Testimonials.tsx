@@ -47,9 +47,9 @@ const Testimonials = () => {
                 <Quote className="w-8 h-8 text-accent" />
               </div>
               
-              <p className="text-sm sm:text-base text-foreground leading-relaxed mb-3">
-                I recently had the pleasure of working with Nandan Goyal on the creation of the MN Garg Trading Company's website, www.mngarg.com, and I have nothing but positive things to say about the experience.
-              </p>
+                <p className="text-sm sm:text-base text-foreground leading-relaxed mb-3">
+                  I recently had the pleasure of working with Nandan Goyal on the creation of the MN Garg Trading Company's website, <a href="https://www.mngarg.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">www.mngarg.com</a>, and I have nothing but positive things to say about the experience.
+                </p>
               
               <p className="text-sm sm:text-base text-foreground leading-relaxed mb-3">
                 Nandan Goyal's expertise in website design and development was evident throughout the entire process. He was extremely professional, detail-oriented, and easy to work with. He took the time to understand our business needs and goals and incorporated them into the website design seamlessly.
