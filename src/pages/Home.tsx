@@ -14,7 +14,7 @@ const Home = () => {
           {/* Professional Banner */}
           <div className="mb-8 sm:mb-12 text-center">
             <div className="inline-block bg-accent/10 text-accent px-4 py-2 rounded-full text-xs sm:text-sm font-semibold border border-accent/20">
-              Open to Tech Consulting & Project Management Opportunities | Available May 2025
+              Open to Tech Consulting & Project Management Opportunities | Available May 2026
             </div>
           </div>
 
