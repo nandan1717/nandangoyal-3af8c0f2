@@ -1,10 +1,36 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import gokuHappy from "@/assets/goku-happy.png";
 
 const About = () => {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://nandangoyal.me"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "About",
+        "item": "https://nandangoyal.me/about"
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="About Nandan Goyal | BBA Student & Tech Leader"
+        description="Learn about Nandan Goyal's journey: BBA Project Management student at Yorkville University, PM Intern at ISYB, VP of YU Creators Club. From vibe coding to leading 150+ students."
+        canonical="https://nandangoyal.me/about"
+        structuredData={[breadcrumbSchema]}
+      />
       <Navigation />
       
       <main className="container mx-auto px-6 pt-32 pb-20">
@@ -137,7 +163,10 @@ const About = () => {
               <div className="flex flex-col justify-center items-center gap-4">
                 <img 
                   src={gokuHappy} 
-                  alt="Happy Goku character representing energy and determination" 
+                  alt="Happy Goku character representing energy and determination"
+                  loading="lazy"
+                  width="512"
+                  height="512"
                   className="w-full max-w-sm md:max-w-md h-auto object-contain hover:scale-105 transition-transform duration-300 rounded-lg"
                 />
                 <p className="text-sm md:text-base text-muted-foreground italic text-center max-w-md px-4">

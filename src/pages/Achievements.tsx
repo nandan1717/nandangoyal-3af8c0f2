@@ -1,9 +1,35 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 
 const Achievements = () => {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://nandangoyal.me"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Achievements",
+        "item": "https://nandangoyal.me/achievements"
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Achievements & Certifications | Nandan Goyal"
+        description="Key achievements: Led 10 Agile sprints at ISYB, delivered 3 web projects, volunteered at 60,000-attendee events. Certifications: CAPM, PL-900, Digital Transformation."
+        canonical="https://nandangoyal.me/achievements"
+        structuredData={[breadcrumbSchema]}
+      />
       <Navigation />
       
       <main className="container mx-auto px-6 pt-32 pb-20">

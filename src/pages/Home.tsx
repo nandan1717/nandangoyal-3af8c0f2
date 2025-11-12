@@ -2,11 +2,54 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import gokuHappy from "@/assets/goku-happy.png";
 
 const Home = () => {
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Nandan Goyal",
+    "jobTitle": "Project Management Student & Tech Consultant",
+    "url": "https://nandangoyal.me",
+    "sameAs": [
+      "https://linkedin.com/in/nandan-goyal-577b47226"
+    ],
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "Yorkville University"
+    },
+    "knowsAbout": ["Project Management", "Tech Consulting", "Agile Methodology", "Full Stack Development", "Leadership"],
+    "email": "nandannn.bti@gmail.com",
+    "telephone": "+1-604-369-7940",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Surrey",
+      "addressRegion": "BC",
+      "addressCountry": "CA"
+    }
+  };
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Nandan Goyal Portfolio",
+    "url": "https://nandangoyal.me",
+    "description": "Portfolio of Nandan Goyal - BBA Project Management Student, Tech Consultant, and Agile PM Intern",
+    "author": {
+      "@type": "Person",
+      "name": "Nandan Goyal"
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Nandan Goyal | Tech Consultant & Project Manager | Available May 2026"
+        description="BBA Project Management Student at Yorkville University. PM Intern at ISYB, VP of YU Creators Club. Leading Agile teams, building full-stack projects, and delivering results."
+        canonical="https://nandangoyal.me"
+        structuredData={[personSchema, websiteSchema]}
+      />
       <Navigation />
       
       <main className="container mx-auto px-4 sm:px-6 pt-20 sm:pt-24 pb-0">

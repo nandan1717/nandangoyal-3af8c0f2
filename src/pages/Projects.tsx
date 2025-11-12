@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -9,6 +10,25 @@ import isybEvents from "@/assets/isyb-events.png";
 import isybPortfolio from "@/assets/isyb-portfolio.png";
 
 const Projects = () => {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://nandangoyal.me"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Projects",
+        "item": "https://nandangoyal.me/projects"
+      }
+    ]
+  };
+
   const projects = [
     {
       title: "Project Management Intern, I Support Your Business",
@@ -47,6 +67,12 @@ const Projects = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Projects & Portfolio | Nandan Goyal | ISYB, YU Creators Club"
+        description="Explore projects by Nandan Goyal: PM Intern at I Support Your Business, freelance web development, and leadership at YU Creators Club. Built with React, TypeScript, and Agile methodology."
+        canonical="https://nandangoyal.me/projects"
+        structuredData={[breadcrumbSchema]}
+      />
       <Navigation />
       
       <main className="container mx-auto px-6 pt-32 pb-20">
@@ -134,6 +160,9 @@ const Projects = () => {
                               <img 
                                 src={screenshot} 
                                 alt={`${project.title} screenshot ${idx + 1}`}
+                                loading="lazy"
+                                width="400"
+                                height="300"
                                 className="w-full h-48 object-cover"
                               />
                             </div>

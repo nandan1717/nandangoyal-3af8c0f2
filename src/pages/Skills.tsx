@@ -1,8 +1,28 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Briefcase, Code, Brain, Users } from "lucide-react";
 
 const Skills = () => {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://nandangoyal.me"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Skills",
+        "item": "https://nandangoyal.me/skills"
+      }
+    ]
+  };
+
   const skillCategories = [
     {
       title: "Project Management",
@@ -43,6 +63,12 @@ const Skills = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Technical Skills & Expertise | Nandan Goyal | PM & Tech Consulting"
+        description="Skills and certifications: Agile/Scrum, Jira, React/TypeScript, Python/Flask, Microsoft Power Platform (PL-900), CAPM certification. Project management and full-stack development expertise."
+        canonical="https://nandangoyal.me/skills"
+        structuredData={[breadcrumbSchema]}
+      />
       <Navigation />
       
       <main className="container mx-auto px-6 pt-32 pb-20">

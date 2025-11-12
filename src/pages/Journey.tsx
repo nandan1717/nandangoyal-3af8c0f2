@@ -1,8 +1,28 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Banknote, Code, Briefcase, GraduationCap, Users, Heart, Shirt, TrendingUp } from "lucide-react";
 
 const Journey = () => {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://nandangoyal.me"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Journey",
+        "item": "https://nandangoyal.me/journey"
+      }
+    ]
+  };
+
   const milestones = [
     {
       date: "March 2023",
@@ -81,6 +101,12 @@ const Journey = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="My Journey | Nandan Goyal | From Vibe Coder to PM Intern"
+        description="Timeline of Nandan Goyal's journey: From discovering web development in 2023 to becoming VP of YU Creators Club and PM Intern at ISYB. Leading 150+ students and delivering Agile sprints."
+        canonical="https://nandangoyal.me/journey"
+        structuredData={[breadcrumbSchema]}
+      />
       <Navigation />
       
       <main className="container mx-auto px-6 pt-32 pb-20">

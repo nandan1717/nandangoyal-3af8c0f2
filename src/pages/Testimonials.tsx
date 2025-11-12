@@ -1,11 +1,86 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Quote } from "lucide-react";
 
 const Testimonials = () => {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://nandangoyal.me"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Testimonials",
+        "item": "https://nandangoyal.me/testimonials"
+      }
+    ]
+  };
+
+  const reviewSchema = {
+    "@context": "https://schema.org",
+    "@type": "ReviewList",
+    "itemReviewed": {
+      "@type": "Person",
+      "name": "Nandan Goyal"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Ismaeil Fazel, PhD",
+          "jobTitle": "Professor, Liberal Arts at Yorkville University"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "reviewBody": "I had the pleasure of teaching Nandan Goyal in my course HUMN422 at Yorkville University. He stood out for his professionalism, curiosity, and strong communication skills."
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Organization",
+          "name": "M. N. GARG TRADING CO."
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "reviewBody": "Nandan Goyal's expertise in website design and development was evident throughout the entire process. He was extremely professional, detail-oriented, and easy to work with."
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Kaustav Ghosh",
+          "jobTitle": "Founder - I Support Your Business"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "reviewBody": "Thank you for the collaborative approach you showcased towards any TECH or IT related tasks. Your understanding and skills are really worth any organisation."
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Testimonials & Reviews | Nandan Goyal"
+        description="What clients and colleagues say about Nandan Goyal. Real testimonials from professors at Yorkville University, business clients, and ISYB founder about project management and web development work."
+        canonical="https://nandangoyal.me/testimonials"
+        structuredData={[breadcrumbSchema, reviewSchema]}
+      />
       <Navigation />
       
       <main className="container mx-auto px-6 pt-32 pb-20">

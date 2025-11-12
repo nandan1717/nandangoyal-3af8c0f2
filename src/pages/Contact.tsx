@@ -1,8 +1,28 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Mail, Phone, Linkedin, MapPin } from "lucide-react";
 
 const Contact = () => {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://nandangoyal.me"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Contact",
+        "item": "https://nandangoyal.me/contact"
+      }
+    ]
+  };
+
   const contactItems = [
     {
       icon: Mail,
@@ -32,6 +52,12 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Contact Nandan Goyal | Tech Consulting & PM Opportunities"
+        description="Get in touch with Nandan Goyal for tech consulting and project management opportunities. Available May 2026. Located in Surrey, BC, Canada."
+        canonical="https://nandangoyal.me/contact"
+        structuredData={[breadcrumbSchema]}
+      />
       <Navigation />
       
       <main className="container mx-auto px-6 pt-32 pb-20">
