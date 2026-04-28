@@ -57,7 +57,7 @@ const Projects = () => {
       ],
       icon: Code,
       status: "Mar 2023 – Present (Hybrid)",
-      techStack: ["React", "TypeScript", "Supabase", "Lovable AI", "shadcn/ui", "Tailwind CSS", "Python", "Flask"],
+      techStack: ["React", "TypeScript", "Supabase", "shadcn/ui", "Tailwind CSS", "Python", "Flask"],
       links: [
         { url: "https://nandangoyal.me", label: "Portfolio Website" },
         { url: "https://yucreatorsclub.ca", label: "YU Creators Club" },
