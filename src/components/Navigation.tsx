@@ -28,7 +28,6 @@ const Navigation = () => {
     { to: "/", label: "Home", end: true },
     { to: "/about", label: "About" },
     { to: "/achievements", label: "Achievements" },
-    { to: "/skills", label: "Skills" },
     { to: "/journey", label: "Journey" },
     { to: "/testimonials", label: "Testimonials" },
     { to: "/projects", label: "Projects" },

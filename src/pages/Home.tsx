@@ -5,7 +5,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { motion, AnimatePresence } from "framer-motion";
-import { Award, BookOpen, Code } from "lucide-react";
+import { Award, BookOpen, Code, Briefcase, Brain, Users } from "lucide-react";
 import carousel1 from "@/assets/carousel-1.jpeg";
 import carousel2 from "@/assets/carousel-2.jpeg";
 import carousel3 from "@/assets/carousel-3.jpeg";
@@ -161,24 +161,144 @@ const Home = () => {
           >
             <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[100px] translate-x-1/3 -translate-y-1/3 pointer-events-none" />
             
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-12 sm:mb-16 relative z-10 tracking-tight">
+              Impact <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-orange-300">&amp;</span> Key Achievements
+            </h2>
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 sm:gap-16 relative z-10">
               <div className="space-y-4 border-l-2 border-accent/30 pl-6 hover:border-accent transition-colors">
                 <div className="text-6xl sm:text-7xl font-black text-white">150<span className="text-accent">+</span></div>
+                <span className="text-xs font-semibold text-accent/80 uppercase tracking-[0.2em]">at YU Creators Club</span>
                 <h4 className="text-xl font-bold text-foreground/90 uppercase tracking-widest">Students Led</h4>
                 <p className="text-foreground/60">As VP of YU Creators Club, fostering innovation.</p>
               </div>
               <div className="space-y-4 border-l-2 border-accent/30 pl-6 hover:border-accent transition-colors">
                 <div className="text-6xl sm:text-7xl font-black text-white">5k<span className="text-accent">+</span></div>
+                <span className="text-xs font-semibold text-accent/80 uppercase tracking-[0.2em]">at Walmart</span>
                 <h4 className="text-xl font-bold text-foreground/90 uppercase tracking-widest">5-Star Ratings</h4>
                 <p className="text-foreground/60">Delivered outstanding customer satisfaction.</p>
               </div>
               <div className="space-y-4 border-l-2 border-accent/30 pl-6 hover:border-accent transition-colors">
                 <div className="text-6xl sm:text-7xl font-black text-white">10<span className="text-accent">+</span></div>
+                <span className="text-xs font-semibold text-accent/80 uppercase tracking-[0.2em]">at ISYB — PM Internship</span>
                 <h4 className="text-xl font-bold text-foreground/90 uppercase tracking-widest">Agile Sprints</h4>
                 <p className="text-foreground/60">Managed complex delivery pipelines.</p>
               </div>
+
+              {/* Row 2 – New Impact Figures */}
+              <div className="space-y-4 border-l-2 border-accent/30 pl-6 hover:border-accent transition-colors">
+                <div className="text-6xl sm:text-7xl font-black text-white">2 <span className="text-accent">Yrs</span></div>
+                <span className="text-xs font-semibold text-accent/80 uppercase tracking-[0.2em]">at Walmart</span>
+                <h4 className="text-xl font-bold text-foreground/90 uppercase tracking-widest">Cashier to Manager</h4>
+                <p className="text-foreground/60">Rapidly excelled from Cashier to Customer Service Manager at Walmart. Earned 5,000+ five-star ratings and onboarded 5+ new team members.</p>
+              </div>
+              <div className="space-y-4 border-l-2 border-accent/30 pl-6 hover:border-accent transition-colors">
+                <div className="text-6xl sm:text-7xl font-black text-white">70<span className="text-accent">%</span></div>
+                <span className="text-xs font-semibold text-accent/80 uppercase tracking-[0.2em]">across every role</span>
+                <h4 className="text-xl font-bold text-foreground/90 uppercase tracking-widest">Efficiency Boost</h4>
+                <p className="text-foreground/60">Dramatically improved project delivery speeds and technical execution by leveraging AI-assisted prototyping and modern web frameworks.</p>
+              </div>
+              <div className="space-y-4 border-l-2 border-accent/30 pl-6 hover:border-accent transition-colors">
+                <div className="text-6xl sm:text-7xl font-black text-white">5<span className="text-accent">+</span></div>
+                <span className="text-xs font-semibold text-accent/80 uppercase tracking-[0.2em]">as a Developer</span>
+                <h4 className="text-xl font-bold text-foreground/90 uppercase tracking-widest">Projects Delivered</h4>
+                <p className="text-foreground/60">End-to-end delivery of full-stack apps, consulting engagements, and event platforms using Agile methodologies.</p>
+              </div>
             </div>
           </motion.div>
+        </section>
+
+        {/* Skill Arsenal Section */}
+        <section className="px-4 sm:px-6 mb-32 relative z-20">
+          <div className="max-w-7xl mx-auto w-full">
+            <motion.h2 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="text-4xl sm:text-5xl font-black text-white mb-16 text-center tracking-tight"
+            >
+              My Skill <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-orange-300">Arsenal</span>
+            </motion.h2>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {[
+                {
+                  title: "Project Management",
+                  icon: Briefcase,
+                  skills: [
+                    "Agile methodology, sprint planning",
+                    "Risk and timeline management",
+                  ],
+                },
+                {
+                  title: "Leadership",
+                  icon: Users,
+                  skills: [
+                    "Team onboarding and delegation",
+                    "Cross-functional coordination",
+                    "Stakeholder communication",
+                  ],
+                },
+                {
+                  title: "Technical",
+                  icon: Code,
+                  skills: [
+                    "Jira, Microsoft Office 360, Docs, Sheets, PowerPoint",
+                    "HTML/CSS/JavaScript, Python/Flask",
+                    "API integration, AI-assisted prototyping",
+                  ],
+                },
+                {
+                  title: "Analysis & Customer Service",
+                  icon: Brain,
+                  skills: [
+                    "Rapid prototyping, iterative development",
+                    "Actionable recommendations",
+                    "Empathy, conflict resolution, survey design",
+                  ],
+                },
+              ].map((category, index) => {
+                const Icon = category.icon;
+                return (
+                  <motion.div 
+                    key={index}
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="bg-white/5 backdrop-blur-2xl border border-white/10 rounded-3xl p-8 hover:bg-white/10 hover:shadow-[0_0_40px_rgba(255,122,0,0.15)] transition-all duration-500 group relative overflow-hidden"
+                  >
+                    {/* Glowing effect on hover */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-accent/0 to-accent/0 group-hover:from-accent/5 group-hover:to-transparent transition-all duration-500" />
+                    
+                    <div className="relative z-10">
+                      <div className="flex items-center gap-5 mb-8">
+                        <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-accent group-hover:border-accent transition-all duration-500 shadow-xl">
+                          <Icon className="w-7 h-7 text-accent group-hover:text-background transition-colors duration-500" />
+                        </div>
+                        <h3 className="text-2xl sm:text-3xl font-bold text-white tracking-tight group-hover:text-accent transition-colors duration-500">
+                          {category.title}
+                        </h3>
+                      </div>
+                      
+                      <ul className="space-y-4">
+                        {category.skills.map((skill, skillIndex) => (
+                          <li 
+                            key={skillIndex}
+                            className="text-foreground/80 font-medium text-lg flex items-start gap-3 group/item"
+                          >
+                            <span className="text-accent mt-1.5 opacity-50 group-hover/item:opacity-100 transition-opacity">&bull;</span>
+                            <span className="group-hover/item:text-white transition-colors">{skill}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
         </section>
 
         {/* Certifications Layer */}

@@ -5,7 +5,6 @@ const Footer = () => {
   const navLinks = [
     { path: "/", label: "Home" },
     { path: "/about", label: "About" },
-    { path: "/skills", label: "Skills" },
     { path: "/journey", label: "Journey" },
     { path: "/achievements", label: "Achievements" },
     { path: "/projects", label: "Projects" },
