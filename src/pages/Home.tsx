@@ -1,9 +1,15 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import gokuHappy from "@/assets/goku-happy.png";
+import { motion, AnimatePresence } from "framer-motion";
+import { Award, BookOpen, Code } from "lucide-react";
+import carousel1 from "@/assets/carousel-1.jpeg";
+import carousel2 from "@/assets/carousel-2.jpeg";
+import carousel3 from "@/assets/carousel-3.jpeg";
+import carousel4 from "@/assets/carousel-4.jpeg";
 
 const Home = () => {
   const personSchema = {
@@ -42,205 +48,190 @@ const Home = () => {
     }
   };
 
+  const images = [carousel1, carousel2, carousel3, carousel4];
+  const [currentImgIndex, setCurrentImgIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImgIndex((prev) => (prev + 1) % images.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, [images.length]);
+
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background relative overflow-hidden text-foreground selection:bg-accent selection:text-accent-foreground">
       <SEO 
         title="Nandan Goyal | Tech Consultant & Project Manager | Available May 2026"
         description="BBA Project Management Student at Yorkville University. PM Intern at ISYB, VP of YU Creators Club. Leading Agile teams, building full-stack projects, and delivering results."
         canonical="https://nandangoyal.me"
         structuredData={[personSchema, websiteSchema]}
       />
+      
+      {/* Ambient Background Orbs */}
+      <div className="fixed top-[-10%] left-[-10%] w-[40vw] h-[40vw] bg-accent/20 rounded-full blur-[120px] pointer-events-none mix-blend-screen opacity-50 animate-pulse-slow" />
+      <div className="fixed bottom-[-10%] right-[-10%] w-[50vw] h-[50vw] bg-accent/10 rounded-full blur-[150px] pointer-events-none mix-blend-screen opacity-30" />
+      <div className="fixed top-[40%] left-[30%] w-[30vw] h-[30vw] bg-blue-900/20 rounded-full blur-[100px] pointer-events-none opacity-40" />
+
       <Navigation />
       
-      <main className="container mx-auto px-4 sm:px-6 pt-20 sm:pt-24 pb-0">
-        <div className="max-w-7xl mx-auto">
-          {/* Professional Banner */}
-          <div className="mb-8 sm:mb-12 text-center">
-            <div className="inline-block bg-accent/10 text-accent px-4 py-2 rounded-full text-xs sm:text-sm font-semibold border border-accent/20">
-              Open to Tech Consulting & Project Management Opportunities | Available May 2026
+      <main className="relative z-10 pt-32 pb-0">
+        
+        {/* Cinematic Hero Section */}
+        <section className="min-h-[85vh] flex items-center px-4 sm:px-6 mb-24">
+          <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            {/* Left: Massive Typography */}
+            <motion.div 
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1.2, ease: "easeOut" }}
+              className="lg:col-span-7 space-y-8 relative z-20"
+            >
+              <div className="inline-flex items-center gap-3 bg-white/5 backdrop-blur-md px-5 py-2.5 rounded-full border border-white/10 shadow-2xl">
+                <div className="w-2 h-2 rounded-full bg-accent animate-ping" />
+                <span className="text-sm font-medium text-foreground/80 tracking-wide uppercase">Open to Opportunities · May 2026</span>
+              </div>
+              
+              <h1 className="text-4xl sm:text-5xl md:text-7xl font-black leading-[1.1] tracking-tighter text-white drop-shadow-2xl">
+                Delivering <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-orange-300">Agile</span> Solutions <br />
+                & Leading Cross-Functional Teams.
+              </h1>
+              
+              <p className="text-lg sm:text-xl md:text-2xl text-foreground/70 font-medium max-w-2xl leading-relaxed">
+                Customer Service Manager Walmart | VP, YU Creators Club | BBA Project Management Graduate | Technical Founder @ NetworkingPilot
+              </p>
+
+              <div className="flex flex-wrap gap-4 pt-4">
+                <Link to="/projects">
+                  <Button size="lg" className="h-14 px-8 text-lg bg-accent hover:bg-accent/90 text-accent-foreground shadow-[0_0_40px_rgba(255,122,0,0.3)] hover:shadow-[0_0_60px_rgba(255,122,0,0.5)] transition-all rounded-full">
+                    Explore My Work
+                  </Button>
+                </Link>
+                <Link to="/about">
+                  <Button size="lg" variant="outline" className="h-14 px-8 text-lg border-white/20 bg-white/5 backdrop-blur-md hover:bg-white/10 text-white rounded-full transition-all">
+                    My Journey
+                  </Button>
+                </Link>
+              </div>
+            </motion.div>
+
+            {/* Right: Carousel */}
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9, y: 50 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ duration: 1.5, ease: "easeOut", delay: 0.3 }}
+              className="lg:col-span-5 relative"
+            >
+              <div className="relative w-full aspect-[4/5] rounded-[2rem] bg-white/5 backdrop-blur-2xl border border-white/10 shadow-[0_30px_100px_rgba(0,0,0,0.4)] overflow-hidden flex items-center justify-center group">
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent z-10" />
+                
+                {/* Abstract graphic representing code/management */}
+                <div className="absolute inset-0 opacity-20 group-hover:scale-105 transition-transform duration-1000 z-10 pointer-events-none">
+                  <div className="absolute top-1/4 left-1/4 w-32 h-32 border border-accent/40 rounded-full animate-[spin_10s_linear_infinite]" />
+                  <div className="absolute top-1/3 left-1/3 w-48 h-48 border border-white/20 rounded-full animate-[spin_15s_linear_infinite_reverse]" />
+                </div>
+
+                <div className="relative z-0 w-full h-full">
+                  <AnimatePresence mode="wait">
+                    <motion.img
+                      key={currentImgIndex}
+                      src={images[currentImgIndex]}
+                      initial={{ opacity: 0, scale: 1.05 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.8 }}
+                      className="absolute inset-0 w-full h-full object-cover object-top"
+                      alt="Project Showcase"
+                    />
+                  </AnimatePresence>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Expansive Stats Section */}
+        <section className="px-4 sm:px-6 mb-32 relative z-20">
+          <motion.div 
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="max-w-7xl mx-auto w-full bg-white/5 backdrop-blur-3xl border border-white/10 rounded-[3rem] p-10 sm:p-16 lg:p-24 shadow-2xl relative overflow-hidden"
+          >
+            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[100px] translate-x-1/3 -translate-y-1/3 pointer-events-none" />
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 sm:gap-16 relative z-10">
+              <div className="space-y-4 border-l-2 border-accent/30 pl-6 hover:border-accent transition-colors">
+                <div className="text-6xl sm:text-7xl font-black text-white">150<span className="text-accent">+</span></div>
+                <h4 className="text-xl font-bold text-foreground/90 uppercase tracking-widest">Students Led</h4>
+                <p className="text-foreground/60">As VP of YU Creators Club, fostering innovation.</p>
+              </div>
+              <div className="space-y-4 border-l-2 border-accent/30 pl-6 hover:border-accent transition-colors">
+                <div className="text-6xl sm:text-7xl font-black text-white">5k<span className="text-accent">+</span></div>
+                <h4 className="text-xl font-bold text-foreground/90 uppercase tracking-widest">5-Star Ratings</h4>
+                <p className="text-foreground/60">Delivered outstanding customer satisfaction.</p>
+              </div>
+              <div className="space-y-4 border-l-2 border-accent/30 pl-6 hover:border-accent transition-colors">
+                <div className="text-6xl sm:text-7xl font-black text-white">10<span className="text-accent">+</span></div>
+                <h4 className="text-xl font-bold text-foreground/90 uppercase tracking-widest">Agile Sprints</h4>
+                <p className="text-foreground/60">Managed complex delivery pipelines.</p>
+              </div>
+            </div>
+          </motion.div>
+        </section>
+
+        {/* Certifications Layer */}
+        <section className="px-4 sm:px-6 mb-32 relative z-20">
+          <div className="max-w-7xl mx-auto w-full">
+            <motion.h2 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="text-4xl sm:text-5xl font-black text-white mb-16 text-center tracking-tight"
+            >
+              Continuous <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-orange-300">Growth</span>
+            </motion.h2>
+
+            <div className="space-y-6">
+              {[
+                { title: "Microsoft Power Platform (PL-900)", org: "Microsoft", status: "In Progress", icon: Award },
+                { title: "CAPM Certification", org: "Project Management Institute", status: "In Progress", icon: Award },
+                { title: "Digital Transformation", org: "University of Waterloo", status: "Oct - Dec 2025", icon: BookOpen },
+                { title: "Full Stack Web Development", org: "Bangalore Computer Education", status: "2023", icon: Code }
+              ].map((cert, index) => (
+                <motion.div 
+                  key={index}
+                  initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.7, delay: index * 0.1 }}
+                  className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 hover:bg-white/10 transition-colors group"
+                >
+                  <div className="flex items-center gap-6">
+                    <div className="w-16 h-16 rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                      <cert.icon className="w-8 h-8 text-accent" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl sm:text-2xl font-bold text-white mb-1">{cert.title}</h3>
+                      <p className="text-foreground/60 font-medium">{cert.org}</p>
+                    </div>
+                  </div>
+                  <div className="bg-white/5 px-6 py-3 rounded-full border border-white/10 shrink-0">
+                    <span className="text-sm font-bold text-accent tracking-widest uppercase">{cert.status}</span>
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
+        </section>
 
-          {/* Hero Section - Professional First */}
-          <div className="text-center space-y-4 sm:space-y-6 mb-12 sm:mb-16">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-foreground">
-              Delivering Agile Solutions & Leading Cross-Functional Teams
-            </h1>
-
-            <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed max-w-4xl mx-auto">
-              BBA Project Management Student | VP, YU Creators Club | PM Intern at ISYB | 
-              Vibe Coder
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center pt-4">
-              <Link to="/projects" className="w-full sm:w-auto">
-                <Button size="lg" className="w-full sm:w-auto text-sm sm:text-base px-8 py-5 bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg">
-                  View My Work
-                </Button>
-              </Link>
-              <Link to="/about" className="w-full sm:w-auto">
-                <Button size="lg" variant="outline" className="w-full sm:w-auto text-sm sm:text-base px-8 py-5 border-2 hover:bg-muted">
-                  My Leadership Story
-                </Button>
-              </Link>
-            </div>
-          </div>
-
-          {/* Stats Counter Section - Single Card */}
-          <div className="bg-card p-8 sm:p-10 rounded-lg border-2 border-border shadow-lg mb-12 sm:mb-16 animate-fade-in">
-            <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-8 text-center">Impact at a Glance</h2>
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-6 sm:gap-8">
-              <div className="text-center">
-                <div className="text-3xl sm:text-4xl font-bold text-accent mb-2">10+</div>
-                <div className="text-xs sm:text-sm text-muted-foreground">Agile Sprints Delivered</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl sm:text-4xl font-bold text-accent mb-2">5</div>
-                <div className="text-xs sm:text-sm text-muted-foreground">Cross-Functional Teams</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl sm:text-4xl font-bold text-accent mb-2">70%</div>
-                <div className="text-xs sm:text-sm text-muted-foreground">Faster with AI Integration</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl sm:text-4xl font-bold text-accent mb-2">150+</div>
-                <div className="text-xs sm:text-sm text-muted-foreground">Students Led at YU Club</div>
-              </div>
-              <div className="text-center col-span-2 md:col-span-1">
-                <div className="text-3xl sm:text-4xl font-bold text-accent mb-2">5000+</div>
-                <div className="text-xs sm:text-sm text-muted-foreground">5-Star Customer Ratings</div>
-              </div>
-            </div>
-          </div>
-
-          {/* Certifications */}
-          <div className="mb-8">
-            <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-6 text-center">Certifications</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 max-w-5xl mx-auto">
-              <div className="bg-accent/10 px-4 py-3 rounded-lg border border-accent/20 text-center">
-                <p className="font-semibold text-accent text-sm">Microsoft Power Platform (PL-900)</p>
-                <p className="text-xs text-accent/70">In Progress</p>
-              </div>
-              <div className="bg-accent/10 px-4 py-3 rounded-lg border border-accent/20 text-center">
-                <p className="font-semibold text-accent text-sm">CAPM</p>
-                <p className="text-xs text-accent/70">PMI - In Progress</p>
-              </div>
-              <div className="bg-accent/10 px-4 py-3 rounded-lg border border-accent/20 text-center">
-                <p className="font-semibold text-accent text-sm">Digital Transformation</p>
-                <p className="text-xs text-accent/70">University of Waterloo (Oct-Dec 2025)</p>
-              </div>
-              <div className="bg-accent/10 px-4 py-3 rounded-lg border border-accent/20 text-center">
-                <p className="font-semibold text-accent text-sm">Full Stack Web Development</p>
-                <p className="text-xs text-accent/70">Bangalore Computer Education (2023)</p>
-              </div>
-              <div className="bg-accent/10 px-4 py-3 rounded-lg border border-accent/20 text-center">
-                <p className="font-semibold text-accent text-sm">C and C++ Programming</p>
-                <p className="text-xs text-accent/70">Bangalore Computer Education (2023)</p>
-              </div>
-            </div>
-          </div>
-        </div>
       </main>
 
-      {/* Testimonials Section */}
-      <section className="pt-8 pb-12 bg-muted/20">
-        <div className="container mx-auto px-4 sm:px-6">
-          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 text-foreground">
-            What People Say
-          </h2>
-          
-          <div className="overflow-x-auto pb-4">
-            <div className="flex gap-6 min-w-max px-2">
-              {/* Ismaeil Fazel Testimonial */}
-              <div className="bg-card p-5 sm:p-6 rounded-lg border shadow-sm w-[350px] sm:w-[450px] flex-shrink-0">
-                <div className="mb-4">
-                  <svg className="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                  </svg>
-                </div>
-                
-                <p className="text-sm sm:text-base text-foreground leading-relaxed mb-3">
-                  I had the pleasure of teaching Nandan Goyal in my course HUMN422 – Topics in Technology and Society at Yorkville University during Summer of 2025, and I can attest to his professionalism, curiosity, and strong communication skills. From day one, he stood out in class. His presentations were not only well-prepared and clear but also engaging and confident—he has a real knack for making material accessible and interesting.
-                </p>
-                
-                <p className="text-sm sm:text-base text-foreground leading-relaxed mb-3">
-                  What also impressed me was how naturally Nandan worked with his peers. It is a rarity in my experience of having taught for over a decade to see a student combine such strong academic performance with genuine openness to diverse perspectives. He collaborated seamlessly with classmates from diverse cultural and professional backgrounds, and his positive attitude and adaptability made him a real asset in our team-oriented learning environment.
-                </p>
-                
-                <p className="text-sm sm:text-base text-foreground leading-relaxed mb-4">
-                  I have no doubt that Nandan will bring the same enthusiasm, thoughtfulness, and strong communication skills to his future roles. I can easily see him thriving in project management or leadership positions, where his ability to connect with people and keep teams moving forward will serve him well.
-                </p>
-                
-                <div className="border-t pt-4">
-                  <p className="font-semibold text-foreground text-sm sm:text-base">Ismaeil Fazel, PhD</p>
-                  <p className="text-xs sm:text-sm text-muted-foreground">Professor, Liberal Arts</p>
-                  <p className="text-xs sm:text-sm text-muted-foreground">Yorkville University, BC Campus</p>
-                </div>
-              </div>
-
-              {/* MN Garg Trading Testimonial */}
-              <div className="bg-card p-5 sm:p-6 rounded-lg border shadow-sm w-[350px] sm:w-[450px] flex-shrink-0">
-                <div className="mb-4">
-                  <svg className="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                  </svg>
-                </div>
-                
-                <p className="text-sm sm:text-base text-foreground leading-relaxed mb-3">
-                  I recently had the pleasure of working with Nandan Goyal on the creation of the MN Garg Trading Company's website, <a href="https://www.mngarg.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">www.mngarg.com</a>, and I have nothing but positive things to say about the experience.
-                </p>
-                
-                <p className="text-sm sm:text-base text-foreground leading-relaxed mb-3">
-                  Nandan Goyal's expertise in website design and development was evident throughout the entire process. He was extremely professional, detail-oriented, and easy to work with. He took the time to understand our business needs and goals and incorporated them into the website design seamlessly.
-                </p>
-                
-                <p className="text-sm sm:text-base text-foreground leading-relaxed mb-3">
-                  Thanks to Nandan Goyal's hard work and dedication, the website for MN Garg Trading Company is now a beautiful and user-friendly online platform for our customers to browse our products. His attention to details and responsiveness to our needs were exceptional.
-                </p>
-                
-                <p className="text-sm sm:text-base text-foreground leading-relaxed mb-4">
-                  Overall, I highly recommend Nandan Goyal to anyone in need of website design and development services. His skills, professionalism, and commitment to excellence are unmatched.
-                </p>
-                
-                <div className="border-t pt-4">
-                  <p className="font-semibold text-foreground text-sm sm:text-base">M. N. GARG TRADING CO.</p>
-                  <p className="text-xs sm:text-sm text-muted-foreground">Wholesale Suppliers of Nut-Bolts, Nails & Hardware Items</p>
-                  <p className="text-xs sm:text-sm text-muted-foreground">Bathinda, Punjab</p>
-                </div>
-              </div>
-
-              {/* Kaustav Ghosh Testimonial */}
-              <div className="bg-card p-5 sm:p-6 rounded-lg border shadow-sm w-[350px] sm:w-[450px] flex-shrink-0">
-                <div className="mb-4">
-                  <svg className="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                  </svg>
-                </div>
-                
-                <p className="text-sm sm:text-base text-foreground leading-relaxed mb-3">
-                  Nandan - thank you so much for the collaborative approach you showcased towards any TECH or IT related tasks we gave you at I Support Your Business. Your understanding and skills are really worth any organisation who will be hosting you in the future.
-                </p>
-                
-                <p className="text-sm sm:text-base text-foreground leading-relaxed mb-3">
-                  Thanks for shaping our backend systems at #ISupportYourBusiness. We look forward to your continued partnership with us.
-                </p>
-                
-                <p className="text-sm sm:text-base text-foreground leading-relaxed mb-4">
-                  Wishing you all the best for all your future endeavours! Good Luck! Cheers!!!
-                </p>
-                
-                <div className="border-t pt-4">
-                  <p className="font-semibold text-foreground text-sm sm:text-base">Kaustav Ghosh</p>
-                  <p className="text-xs sm:text-sm text-muted-foreground">COACH | Counselor | Business Consultant | Storytelling Evangelist</p>
-                  <p className="text-xs sm:text-sm text-muted-foreground">Founder - I Support Your Business (ISYB)</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <Footer />
+      <div className="relative z-20">
+        <Footer />
+      </div>
     </div>
   );
 };

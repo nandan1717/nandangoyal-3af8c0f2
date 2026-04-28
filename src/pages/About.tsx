@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import { motion } from "framer-motion";
 import gokuHappy from "@/assets/goku-happy.png";
 
 const About = () => {
@@ -23,161 +24,205 @@ const About = () => {
     ]
   };
 
+  const experience = [
+    {
+      title: "Customer Service Manager",
+      org: "Walmart",
+      date: "Dec 2025 – Present",
+      bullets: [
+        "Promoted from Cashier to Manager in under 2 years, managing high-volume operations",
+        "Training and onboarding 5+ new team members to ensure consistent service standards",
+        "Consistently received 5-star ratings for customer service excellence"
+      ]
+    },
+    {
+      title: "Project Management Intern",
+      org: "I Support Your Business",
+      date: "Feb 2025 – Dec 2025",
+      bullets: [
+        "Led 10+ Agile sprints with cross-functional teams across 5 departments",
+        "Implemented Jira for improved project tracking and team alignment",
+        "Facilitated sprint planning, retrospectives, and stakeholder communication"
+      ]
+    },
+    {
+      title: "Vice President",
+      org: "Yorkville University Creators Club",
+      date: "May 2025 – Mar 2026",
+      bullets: [
+        "Led 150+ students across music, photography, and web development initiatives",
+        "Organized and executed campus events with cross-functional teams",
+        "Built community engagement and member retention strategies"
+      ]
+    },
+    {
+      title: "Vibe Coder",
+      org: "Freelance",
+      date: "Mar 2023 – Present",
+      bullets: [
+        "Delivered 3 web projects using React, TypeScript, and Supabase",
+        "Improved delivery speed by 70% with AI-assisted prototyping",
+        "Managed client relationships and iterative feedback cycles"
+      ]
+    },
+    {
+      title: "Cashier",
+      org: "Walmart",
+      date: "Apr 2023 – Dec 2025",
+      bullets: [
+        "Developed customer service and communication skills in a fast-paced retail environment",
+        "Learned patience, people management, and handling pressure in high-volume transactions",
+        "Applied problem-solving skills to resolve customer issues efficiently"
+      ]
+    }
+  ];
+
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background relative overflow-hidden text-foreground selection:bg-accent selection:text-foreground">
       <SEO 
         title="About Nandan Goyal | BBA Student & Tech Leader"
         description="Learn about Nandan Goyal's journey: BBA Project Management student at Yorkville University, PM Intern at ISYB, VP of YU Creators Club. From vibe coding to leading 150+ students."
         canonical="https://nandangoyal.me/about"
         structuredData={[breadcrumbSchema]}
       />
+      
+      {/* Ambient Background Orbs */}
+      <div className="fixed top-[10%] left-[-20%] w-[50vw] h-[50vw] bg-accent/10 rounded-full blur-[150px] pointer-events-none mix-blend-screen opacity-50" />
+      <div className="fixed bottom-[20%] right-[-10%] w-[40vw] h-[40vw] bg-blue-900/20 rounded-full blur-[120px] pointer-events-none mix-blend-screen opacity-40" />
+
       <Navigation />
       
-      <main className="container mx-auto px-6 pt-32 pb-20">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
-            Nandan Goyal
-          </h1>
-          <p className="text-xl text-accent font-semibold mb-12">
-            BBA Project Management Student | Agile PM Intern | Vibe Coder
-          </p>
-
-          {/* Professional Overview Section */}
-          <div className="space-y-8 text-lg leading-relaxed mb-16">
-            <div className="bg-card p-8 rounded-lg border-2 border-border shadow-sm">
-              <h2 className="text-2xl font-bold text-foreground mb-6">Professional Summary</h2>
-              <p className="text-foreground mb-4">
-                I'm a 21-year-old BBA Project Management student at Yorkville University (graduating March 2026), 
-                currently serving as a Project Management Intern at I Support Your Business and Vice President 
-                of the Yorkville University Creators Club.
-              </p>
-              <p className="text-foreground">
-                With hands-on experience in Agile methodologies, cross-functional team leadership, and full-stack 
-                development, I bridge the gap between technical execution and strategic project management.
-              </p>
-            </div>
-
-            {/* Education */}
-            <div className="bg-accent/5 p-6 rounded-lg border-l-4 border-accent">
-              <h3 className="text-xl font-bold text-foreground mb-4">Education</h3>
-              <p className="text-foreground text-lg mb-2">
-                <span className="font-semibold">Bachelor of Business Administration (Project Management)</span><br/>
-                Yorkville University, Canada<br/>
-                Expected Graduation: March 2026
-              </p>
-              <p className="text-sm text-muted-foreground mt-3">
-                <span className="font-semibold">Relevant Coursework:</span> Intro to Project Management, 
-                Teams and Leadership, Project Planning, Execution/Control/Closure, Advanced PM, 
-                Business/Sustainability, Managerial Accounting, Business Strategy
-              </p>
-            </div>
-
-            {/* Professional Experience */}
-            <div>
-              <h2 className="text-2xl font-bold text-foreground mb-6">Professional Experience</h2>
-              
-              <div className="space-y-6">
-                <div className="border-l-4 border-accent pl-6">
-                  <h3 className="text-xl font-semibold text-foreground">Project Management Intern</h3>
-                  <p className="text-accent font-medium mb-2">I Support Your Business | Feb 2025 – Present</p>
-                  <ul className="space-y-2 text-foreground/80">
-                    <li>• Leading 10+ Agile sprints with cross-functional teams across 5 departments</li>
-                    <li>• Implementing Jira for improved project tracking and team alignment</li>
-                    <li>• Facilitating sprint planning, retrospectives, and stakeholder communication</li>
-                  </ul>
-                </div>
-
-                <div className="border-l-4 border-accent pl-6">
-                  <h3 className="text-xl font-semibold text-foreground">Vice President</h3>
-                  <p className="text-accent font-medium mb-2">Yorkville University Creators Club | Present</p>
-                  <ul className="space-y-2 text-foreground/80">
-                    <li>• Leading 150+ students across music, photography, and web development initiatives</li>
-                    <li>• Organizing and executing campus events with cross-functional teams</li>
-                    <li>• Building community engagement and member retention strategies</li>
-                  </ul>
-                </div>
-
-                <div className="border-l-4 border-accent pl-6">
-                  <h3 className="text-xl font-semibold text-foreground">Vibe Coder</h3>
-                  <p className="text-accent font-medium mb-2">Freelance | Mar 2023 – Present</p>
-                  <ul className="space-y-2 text-foreground/80">
-                    <li>• Delivered 3 web projects using React, TypeScript, and Supabase</li>
-                    <li>• Improved delivery speed by 70% with AI-assisted prototyping</li>
-                    <li>• Managing client relationships and iterative feedback cycles</li>
-                  </ul>
-                </div>
-
-                <div className="border-l-4 border-accent pl-6">
-                  <h3 className="text-xl font-semibold text-foreground">Cashier, Customer Service Associate</h3>
-                  <p className="text-accent font-medium mb-2">Walmart | Part-time</p>
-                  <ul className="space-y-2 text-foreground/80">
-                    <li>• Developed customer service and communication skills in fast-paced retail environment</li>
-                    <li>• Learned patience, people management, and handling pressure in high-volume transactions</li>
-                    <li>• Applied problem-solving skills to resolve customer issues efficiently</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Beyond the Resume Section */}
-          <div className="pt-12 border-t-2 border-border">
-            <h2 className="text-3xl font-bold text-foreground mb-8">Beyond the Resume</h2>
+      <main className="relative z-10 pt-32 pb-20">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="max-w-5xl mx-auto">
             
-            <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-start mb-8">
-              <div className="space-y-6 text-lg leading-relaxed">
-                <p className="text-foreground text-xl">
-                  But if I had to describe myself beyond the labels? I'd say I'm someone who's always 
-                  hungry. Hungry to learn, to create, to test myself, and to leave something behind 
-                  that actually matters.
-                </p>
+            {/* Header */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+              className="text-center mb-24"
+            >
+              <h1 className="text-5xl md:text-7xl font-black mb-6 text-white tracking-tight drop-shadow-2xl">
+                The <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-orange-300">Journey</span>.
+              </h1>
+              <p className="text-xl md:text-2xl text-foreground/70 font-medium max-w-3xl mx-auto leading-relaxed">
+                I'm a 21-year-old BBA Project Management student bridging the gap between technical execution and strategic leadership.
+              </p>
+            </motion.div>
 
-                <div className="bg-muted/30 p-8 rounded-lg">
-                  <p className="text-foreground font-semibold text-xl mb-6">Here's the real me:</p>
-
-                  <ul className="space-y-6 text-foreground">
-                    <li className="pl-6 border-l-2 border-accent">
-                      In 2023, I picked up <span className="font-semibold">vibe coding</span>. I don't 
-                      code like a Silicon Valley engineer — I build because I enjoy creating things that work, 
-                      mixing tools like AI and my own skills.
-                    </li>
-                    <li className="pl-6 border-l-2 border-accent">
-                      I've volunteered at community events like <span className="font-semibold">Pumpkin After 
-                      Dark in Burnaby</span>, because giving back feels right.
-                    </li>
-                    <li className="pl-6 border-l-2 border-accent">
-                      My dream? To build an <span className="font-semibold">empire in India centered around 
-                      sustainability and agro-waste innovation</span>. And right now, I'm also working on 
-                      <span className="font-semibold"> GEAR</span>, my own fashion-forward, sculptural sneaker 
-                      and cooling apparel brand.
-                    </li>
-                  </ul>
+            {/* Classic Stacked Layout */}
+            <div className="space-y-20">
+              
+              {/* My Story Section */}
+              <motion.section 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+              >
+                <h2 className="text-3xl font-bold mb-8 text-white flex items-center gap-4">
+                  <span className="w-8 h-1 bg-accent rounded-full" />
+                  My Story
+                </h2>
+                <div className="bg-white/5 backdrop-blur-2xl border border-white/10 rounded-3xl p-8 md:p-10 shadow-2xl">
+                  <div className="space-y-6 text-lg text-foreground/80 leading-relaxed max-w-4xl">
+                    <p>
+                      I don't code like a Silicon Valley engineer — I build because I enjoy creating things that work, mixing tools like AI and my own skills.
+                    </p>
+                    <p>
+                      My dream? To build an empire in India centered around sustainability and agro-waste innovation. 
+                    </p>
+                    <p>
+                      I'm not perfect. I don't have it all figured out. But I'm moving — step by step, brick by brick.
+                    </p>
+                  </div>
+                  
+                  <div className="mt-10 flex items-center gap-6">
+                    <div className="w-20 h-20 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center p-2">
+                      <img 
+                        src={gokuHappy} 
+                        alt="Goku"
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                    <p className="text-sm text-foreground/50 italic max-w-xs">
+                      Driven by the same spirit of growth and resilience.
+                    </p>
+                  </div>
                 </div>
+              </motion.section>
 
-                <p className="text-foreground">
-                  I'm not perfect. I don't have it all figured out. But I'm moving — step by step, 
-                  brick by brick.
-                </p>
-              </div>
+              {/* Education Section */}
+              <motion.section
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+              >
+                <h2 className="text-3xl font-bold mb-8 text-white flex items-center gap-4">
+                  <span className="w-8 h-1 bg-accent rounded-full" />
+                  Education
+                </h2>
+                <div className="bg-white/5 backdrop-blur-2xl border border-white/10 rounded-3xl p-8 md:p-10 shadow-2xl group hover:bg-white/10 transition-colors">
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">Bachelor of Business Administration</h3>
+                  <p className="text-xl text-accent font-medium mb-6">Yorkville University, Canada &middot; Mar 2026</p>
+                  <p className="text-lg text-foreground/70 leading-relaxed">
+                    <span className="font-semibold text-white">Focus Areas:</span> Project Management, Teams and Leadership, Project Planning, Business Strategy, Sustainability.
+                  </p>
+                </div>
+              </motion.section>
 
-              <div className="flex flex-col justify-center items-center gap-4">
-                <img 
-                  src={gokuHappy} 
-                  alt="Happy Goku character representing energy and determination"
-                  loading="lazy"
-                  width="512"
-                  height="512"
-                  className="w-full max-w-sm md:max-w-md h-auto object-contain hover:scale-105 transition-transform duration-300 rounded-lg"
-                />
-                <p className="text-sm md:text-base text-muted-foreground italic text-center max-w-md px-4">
-                  I use Goku here because I'm driven by the same spirit of growth, resilience, and always pushing my own limits—just like him
-                </p>
-              </div>
+              {/* Experience Section */}
+              <motion.section
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+              >
+                <h2 className="text-3xl font-bold mb-8 text-white flex items-center gap-4">
+                  <span className="w-8 h-1 bg-accent rounded-full" />
+                  Experience
+                </h2>
+                <div className="space-y-6">
+                  {experience.map((exp, index) => (
+                    <motion.div 
+                      key={index}
+                      initial={{ opacity: 0, x: -30 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:bg-white/10 hover:border-accent/50 transition-all duration-300 group"
+                    >
+                      <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-6">
+                        <div>
+                          <h3 className="text-2xl font-bold text-white mb-1 group-hover:text-accent transition-colors">{exp.title}</h3>
+                          <p className="text-lg text-foreground/60 font-medium">{exp.org}</p>
+                        </div>
+                        <div className="inline-block px-4 py-2 rounded-full bg-accent/10 border border-accent/20 text-sm font-bold text-accent whitespace-nowrap self-start">
+                          {exp.date}
+                        </div>
+                      </div>
+                      <ul className="space-y-3">
+                        {exp.bullets.map((bullet, i) => (
+                          <li key={i} className="flex items-start gap-3 text-lg text-foreground/80 leading-relaxed">
+                            <span className="text-accent mt-1">&bull;</span>
+                            <span>{bullet}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.section>
+              
             </div>
           </div>
         </div>
       </main>
-      <Footer />
+      <div className="relative z-20">
+        <Footer />
+      </div>
     </div>
   );
 };

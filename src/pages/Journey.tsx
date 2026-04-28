@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { Banknote, Code, Briefcase, GraduationCap, Users, Heart, Shirt, TrendingUp } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Journey = () => {
   const breadcrumbSchema = {
@@ -70,7 +71,7 @@ const Journey = () => {
             href="https://www.isupportyouprogram.com" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="text-accent hover:underline"
+            className="text-accent hover:underline font-bold"
           >
             www.isupportyouprogram.com
           </a>
@@ -100,59 +101,93 @@ const Journey = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background relative overflow-hidden text-foreground selection:bg-accent selection:text-foreground">
       <SEO 
         title="My Journey | Nandan Goyal | From Vibe Coder to PM Intern"
         description="Timeline of Nandan Goyal's journey: From discovering web development in 2023 to becoming VP of YU Creators Club and PM Intern at ISYB. Leading 150+ students and delivering Agile sprints."
         canonical="https://nandangoyal.me/journey"
         structuredData={[breadcrumbSchema]}
       />
+      
+      {/* Ambient Background Orbs */}
+      <div className="fixed top-[20%] left-[-10%] w-[40vw] h-[40vw] bg-accent/10 rounded-full blur-[150px] pointer-events-none mix-blend-screen opacity-40" />
+      <div className="fixed bottom-[10%] right-[-10%] w-[50vw] h-[50vw] bg-blue-900/20 rounded-full blur-[150px] pointer-events-none mix-blend-screen opacity-30" />
+
       <Navigation />
       
-      <main className="container mx-auto px-6 pt-32 pb-20">
-        <div className="max-w-6xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-            My Path So Far
-          </h1>
-          <p className="text-xl text-muted-foreground mb-16">
-            Still young. Still figuring it out. But every step is part of the story.
-          </p>
+      <main className="relative z-10 pt-32 pb-20">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="max-w-4xl mx-auto">
+            
+            {/* Header */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+              className="text-center mb-24"
+            >
+              <h1 className="text-5xl md:text-7xl font-black mb-6 text-white tracking-tight drop-shadow-2xl">
+                My <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-orange-300">Path</span> So Far.
+              </h1>
+              <p className="text-xl md:text-2xl text-foreground/70 font-medium max-w-2xl mx-auto leading-relaxed">
+                Still young. Still figuring it out. But every step is part of the story.
+              </p>
+            </motion.div>
 
-          <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-border" />
+            {/* Cinematic Timeline */}
+            <div className="relative">
+              {/* Glowing vertical line */}
+              <div className="absolute left-8 md:left-12 top-0 bottom-0 w-1 bg-gradient-to-b from-accent/0 via-accent/30 to-accent/0" />
 
-            {/* Milestones */}
-            <div className="space-y-12">
-              {milestones.map((milestone, index) => {
-                const Icon = milestone.icon;
-                return (
-                  <div key={index} className="relative flex gap-6 group">
-                    {/* Icon */}
-                    <div className="flex-shrink-0 w-16 h-16 rounded-full bg-accent flex items-center justify-center text-accent-foreground z-10 transition-transform group-hover:scale-110">
-                      <Icon className="w-7 h-7" />
-                    </div>
-
-                    {/* Content */}
-                    <div className="flex-1 pb-8">
-                      <div className="text-sm text-accent font-semibold mb-1">
-                        {milestone.date}
+              <div className="space-y-16">
+                {milestones.map((milestone, index) => {
+                  const Icon = milestone.icon;
+                  return (
+                    <motion.div 
+                      key={index}
+                      initial={{ opacity: 0, x: -50 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true, margin: "-100px" }}
+                      transition={{ duration: 0.8, delay: index * 0.1 }}
+                      className="relative flex gap-6 md:gap-10 group"
+                    >
+                      {/* Icon */}
+                      <div className="relative z-10 flex-shrink-0 w-16 h-16 md:w-24 md:h-24 rounded-full bg-background border-4 border-white/10 flex items-center justify-center group-hover:border-accent group-hover:scale-110 transition-all duration-500 shadow-2xl">
+                        <div className="absolute inset-0 bg-accent/10 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity" />
+                        <Icon className="w-8 h-8 md:w-10 md:h-10 text-white/50 group-hover:text-accent transition-colors duration-500" />
                       </div>
-                      <h3 className="text-2xl font-bold text-foreground mb-2">
-                        {milestone.title}
-                      </h3>
-                      <p className="text-lg text-muted-foreground leading-relaxed">
-                        {milestone.description}
-                      </p>
-                    </div>
-                  </div>
-                );
-              })}
+
+                      {/* Content Panel */}
+                      <div className="flex-1 pt-2 md:pt-4">
+                        <div className="bg-white/5 backdrop-blur-2xl border border-white/10 rounded-3xl p-6 md:p-8 hover:bg-white/10 transition-colors duration-500 hover:shadow-[0_0_40px_rgba(255,122,0,0.1)] relative overflow-hidden group/card">
+                          <div className="absolute inset-0 bg-gradient-to-br from-accent/0 to-transparent group-hover/card:from-accent/5 transition-all duration-500" />
+                          
+                          <div className="relative z-10">
+                            <div className="inline-block px-3 py-1 mb-4 rounded-full bg-accent/10 border border-accent/20 text-xs font-bold text-accent tracking-widest uppercase">
+                              {milestone.date}
+                            </div>
+                            <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 tracking-tight group-hover/card:text-accent transition-colors">
+                              {milestone.title}
+                            </h3>
+                            <p className="text-lg text-foreground/80 leading-relaxed font-medium">
+                              {milestone.description}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </motion.div>
+                  );
+                })}
+              </div>
             </div>
+
           </div>
         </div>
       </main>
-      <Footer />
+      
+      <div className="relative z-20">
+        <Footer />
+      </div>
     </div>
   );
 };

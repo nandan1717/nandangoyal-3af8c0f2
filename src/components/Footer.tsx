@@ -37,80 +37,62 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-primary text-primary-foreground border-t border-primary/20 mt-auto">
-      <div className="container mx-auto px-4 py-6 md:py-8">
-        {/* Top Section - Full Width Bio */}
-        <div className="mb-6 pb-6 border-b border-primary-foreground/20">
-          <h3 className="text-lg font-bold mb-3">Nandan Goyal</h3>
-          <p className="text-primary-foreground/80 text-sm mb-3 leading-relaxed max-w-3xl">
-            Aspiring Agile Project Manager | BBA Project Management Student | VP, YU Creators Club | Tech-Savvy & AI-Driven | Vibe Coder | Seeking Tech Consulting and Project Management Roles
-          </p>
-          <div className="flex items-center gap-2 text-sm text-primary-foreground/80">
-            <MapPin className="w-4 h-4" />
-            <span>Surrey, Canada</span>
-          </div>
-        </div>
-
-        {/* Bottom Section - Quick Links & Connect */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Quick Links - 3 Vertical Columns */}
-          <div>
-            <h3 className="text-lg font-bold mb-3">Quick Links</h3>
-            <div className="grid grid-cols-3 gap-x-4 gap-y-2">
-              {/* Column 1 */}
-              <div className="flex flex-col gap-2">
-                <NavLink to="/achievements" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
-                  Achievements
-                </NavLink>
-                <NavLink to="/projects" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
-                  Projects
-                </NavLink>
-                <NavLink to="/testimonials" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
-                  Testimonials
-                </NavLink>
-              </div>
-              
-              {/* Column 2 */}
-              <div className="flex flex-col gap-2">
-                <NavLink to="/skills" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
-                  Skills
-                </NavLink>
-                <NavLink to="/journey" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
-                  Journey
-                </NavLink>
-                <NavLink to="/about" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
-                  About
-                </NavLink>
-              </div>
-              
-              {/* Column 3 */}
-              <div className="flex flex-col gap-2">
-                <NavLink to="/" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
-                  Home
-                </NavLink>
-                <NavLink to="/contact" className="text-sm text-primary-foreground/80 hover:text-accent transition-colors">
-                  Contact
-                </NavLink>
-              </div>
+    <footer className="relative bg-white/5 backdrop-blur-3xl border-t border-white/10 mt-32 overflow-hidden text-white">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-accent/10 blur-[120px] pointer-events-none" />
+      
+      <div className="container mx-auto px-6 py-20 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+          
+          {/* Brand & Bio */}
+          <div className="lg:col-span-5 space-y-8">
+            <NavLink to="/" className="inline-block">
+              <h2 className="text-4xl sm:text-5xl font-black text-white tracking-tighter hover:text-accent transition-colors">
+                Nandan<span className="text-accent">Goyal</span>.
+              </h2>
+            </NavLink>
+            <p className="text-lg text-foreground/70 font-medium leading-relaxed max-w-md">
+              Aspiring Agile Project Manager & Vibe Coder. Merging strategic vision with technical execution to build high-impact platforms.
+            </p>
+            <div className="flex items-center gap-2 text-foreground/80 font-medium bg-white/5 w-fit px-4 py-2 rounded-full border border-white/10">
+              <MapPin className="w-5 h-5 text-accent" />
+              <span>Surrey, Canada</span>
             </div>
           </div>
 
-          {/* Connect */}
-          <div>
-            <h3 className="text-lg font-bold mb-3">Connect</h3>
-            <div className="flex flex-col gap-2">
-              {socialLinks.map((link) => {
-                const Icon = link.icon;
+          {/* Quick Links */}
+          <div className="lg:col-span-4">
+            <h3 className="text-sm font-bold text-foreground/50 uppercase tracking-widest mb-6">Navigation</h3>
+            <div className="grid grid-cols-2 gap-4">
+              {navLinks.map((link) => (
+                <NavLink 
+                  key={link.path} 
+                  to={link.path}
+                  className="text-white hover:text-accent font-medium transition-colors"
+                >
+                  {link.label}
+                </NavLink>
+              ))}
+            </div>
+          </div>
+
+          {/* Social Connect */}
+          <div className="lg:col-span-3">
+            <h3 className="text-sm font-bold text-foreground/50 uppercase tracking-widest mb-6">Connect</h3>
+            <div className="flex flex-col gap-4">
+              {socialLinks.map((social) => {
+                const Icon = social.icon;
                 return (
-                  <a
-                    key={link.label}
-                    href={link.href}
+                  <a 
+                    key={social.label}
+                    href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 text-sm text-primary-foreground/80 hover:text-accent transition-colors"
+                    className="flex items-center gap-4 text-white hover:text-accent transition-colors group"
                   >
-                    <Icon className="w-4 h-4" />
-                    <span>{link.label}</span>
+                    <div className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-accent/20 group-hover:border-accent/40 transition-all">
+                      <Icon className="w-5 h-5" />
+                    </div>
+                    <span className="font-medium">{social.label}</span>
                   </a>
                 );
               })}
@@ -118,9 +100,14 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Copyright */}
-        <div className="mt-6 pt-4 border-t border-primary-foreground/20 text-center text-sm text-primary-foreground/70">
-          <p>&copy; {new Date().getFullYear()} Nandan Goyal. All rights reserved.</p>
+        {/* Bottom Bar */}
+        <div className="mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-foreground/50 text-sm font-medium">
+            &copy; {new Date().getFullYear()} Nandan Goyal. All rights reserved.
+          </p>
+          <div className="text-foreground/50 text-sm font-medium">
+            Designed & Built with <span className="text-accent">♥</span>
+          </div>
         </div>
       </div>
     </footer>

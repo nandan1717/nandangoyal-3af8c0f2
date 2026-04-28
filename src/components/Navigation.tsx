@@ -36,8 +36,8 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
-      <div className="container mx-auto px-4 sm:px-6 py-4">
+    <div className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4">
+      <nav className="bg-background/60 backdrop-blur-2xl border border-white/10 shadow-[0_10px_40px_rgba(0,0,0,0.5)] rounded-full px-6 py-3 w-full max-w-5xl">
         <div className="flex items-center justify-between">
           <NavLink
             to="/"
@@ -64,13 +64,13 @@ const Navigation = () => {
           <div className="lg:hidden">
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
-                <button className="text-foreground p-2 hover:bg-muted rounded-lg transition-colors">
+                <button className="text-foreground p-2 hover:bg-white/10 rounded-lg transition-colors">
                   {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                 </button>
               </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+            <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-background border-l border-white/10">
               <SheetHeader>
-                <SheetTitle className="text-left text-2xl font-bold">
+                <SheetTitle className="text-left text-2xl font-bold text-white">
                   Menu
                 </SheetTitle>
               </SheetHeader>
@@ -91,8 +91,8 @@ const Navigation = () => {
             </Sheet>
           </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
   );
 };
 
