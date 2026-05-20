@@ -5,11 +5,13 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { motion, AnimatePresence } from "framer-motion";
-import { Award, BookOpen, Code, Briefcase, Brain, Users } from "lucide-react";
+import { Award, BookOpen, Code, Briefcase, Brain, Users, Rocket, Shield, Cpu, ArrowRight, ExternalLink } from "lucide-react";
 import carousel1 from "@/assets/carousel-1.jpeg";
 import carousel2 from "@/assets/carousel-2.jpeg";
 import carousel3 from "@/assets/carousel-3.jpeg";
 import carousel4 from "@/assets/carousel-4.jpeg";
+import carousel5 from "@/assets/carousel-5.mp4";
+import networkingPilotLogo from "@/assets/networking-pilot-logo.png";
 
 const Home = () => {
   const personSchema = {
@@ -298,6 +300,183 @@ const Home = () => {
                 );
               })}
             </div>
+          </div>
+        </section>
+
+        {/* Featured Projects Section */}
+        <section className="px-4 sm:px-6 mb-32 relative z-20">
+          <div className="max-w-7xl mx-auto w-full">
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="text-4xl sm:text-5xl font-black text-white mb-16 text-center tracking-tight"
+            >
+              Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-orange-300">Projects</span>
+            </motion.h2>
+
+            {/* Networking Pilot Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8 }}
+              className="relative"
+            >
+              {/* Glowing background layer */}
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent rounded-3xl blur-xl" />
+
+              <div className="relative bg-white/5 backdrop-blur-2xl border border-white/10 rounded-3xl overflow-hidden shadow-2xl group">
+
+                {/* Top Header */}
+                <div className="p-8 md:p-12 border-b border-white/10 relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                  <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
+                    <div className="flex items-start gap-6">
+                      <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0 shadow-xl group-hover:border-accent/50 transition-colors duration-500 overflow-hidden">
+                        <img src={networkingPilotLogo} alt="Networking Pilot" className="w-12 h-12 object-contain" />
+                      </div>
+                      <div>
+                        <h3 className="text-3xl font-black text-white tracking-tight mb-2 group-hover:text-accent transition-colors duration-500">
+                          Networking Pilot
+                        </h3>
+                        <p className="text-xl text-foreground/80 font-medium">
+                          Solo Builder — Product, Design & Engineering
+                        </p>
+                        <div className="mt-4 inline-block px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-bold text-accent tracking-widest uppercase">
+                          2025 · Shipped
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Content Section */}
+                <div className="p-8 md:p-12 grid lg:grid-cols-12 gap-12">
+
+                  {/* Left: Description & Highlights */}
+                  <div className="lg:col-span-5 space-y-8">
+                    <p className="text-foreground/70 text-lg leading-relaxed">
+                      An intelligent, privacy-first career co-pilot that matches professionals with the right networking events — and generates personalized elevator pitches calibrated to their background.
+                    </p>
+
+                    <div>
+                      <h4 className="text-sm font-bold text-foreground/50 uppercase tracking-widest mb-6">Key Highlights</h4>
+                      <ul className="space-y-4">
+                        {[
+                          "AI alignment score per event based on resume",
+                          "Personalized elevator pitch with tone toggle",
+                          "Client-side PII scrubbing before any API call",
+                          "Row Level Security on every Supabase table",
+                          "Dual platform — web (Next.js) & mobile (Expo)",
+                          "Automated re-engagement email pipelines"
+                        ].map((highlight, idx) => (
+                          <li key={idx} className="flex items-start gap-3 group/item">
+                            <span className="text-accent mt-1 opacity-50 group-hover/item:opacity-100 transition-opacity">&bull;</span>
+                            <span className="text-white/80 leading-relaxed font-medium group-hover/item:text-white transition-colors">{highlight}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h4 className="text-sm font-bold text-foreground/50 uppercase tracking-widest mb-4">Tech Stack</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {["Next.js", "Expo", "Supabase", "Gemini AI", "Turborepo", "Resend"].map((tech, idx) => (
+                          <span
+                            key={idx}
+                            className="text-sm bg-white/5 text-white/80 border border-white/10 hover:bg-accent hover:text-background hover:border-accent transition-all px-3 py-1.5 rounded-md font-medium"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="pt-2 flex flex-wrap gap-3">
+                      <Button asChild className="h-12 px-6 rounded-full border-white/20 bg-white/5 hover:bg-white/10 text-white transition-all font-semibold backdrop-blur-md gap-2">
+                        <a href="https://networkingpilot.ca" target="_blank" rel="noopener noreferrer">
+                          Visit Project
+                          <ExternalLink className="w-4 h-4" />
+                        </a>
+                      </Button>
+                      <Link to="/networking-pilot">
+                        <Button className="h-12 px-6 rounded-full bg-accent hover:bg-accent/90 text-accent-foreground shadow-[0_0_20px_rgba(255,122,0,0.3)] hover:shadow-[0_0_40px_rgba(255,122,0,0.5)] transition-all font-semibold gap-2">
+                          Read Case Study
+                          <ArrowRight className="w-4 h-4" />
+                        </Button>
+                      </Link>
+                    </div>
+                  </div>
+
+                  {/* Right: Feature Window Mockup */}
+                  <div className="lg:col-span-7 space-y-6">
+                    <h4 className="text-sm font-bold text-foreground/50 uppercase tracking-widest mb-4">Architecture Decisions</h4>
+
+                    <div className="grid gap-4">
+                      {[
+                        {
+                          icon: Shield,
+                          title: "Privacy by Architecture",
+                          desc: "Dual-layer regex scrubber strips PII client-side before any data touches the Gemini API. Privacy isn't a disclaimer — it's enforced."
+                        },
+                        {
+                          icon: Cpu,
+                          title: "Monorepo from Day One",
+                          desc: "Turborepo powers shared types, unified scripts, and zero duplicated logic across web and mobile."
+                        },
+                        {
+                          icon: Shield,
+                          title: "Row Level Security",
+                          desc: "Supabase RLS policies ensure user A can never access user B's data — not even by accident."
+                        }
+                      ].map((decision, idx) => {
+                        const DecisionIcon = decision.icon;
+                        return (
+                          <div key={idx} className="bg-white/5 border border-white/10 rounded-2xl p-6 relative overflow-hidden group/card hover:border-white/20 transition-all duration-500">
+                            <div className="absolute left-0 top-0 w-1 h-full bg-accent opacity-0 group-hover/card:opacity-100 transition-opacity" />
+                            <div className="flex items-start gap-4">
+                              <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover/card:bg-accent/10 group-hover/card:border-accent/30 transition-all duration-500">
+                                <DecisionIcon className="w-5 h-5 text-accent" />
+                              </div>
+                              <div>
+                                <h5 className="text-base font-bold text-white mb-1">{decision.title}</h5>
+                                <p className="text-sm text-foreground/60 leading-relaxed">{decision.desc}</p>
+                              </div>
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+
+                    {/* Pull quote */}
+                    <div className="mt-6 pl-5 border-l-2 border-accent/50 bg-accent/5 py-4 pr-5 rounded-r-lg">
+                      <p className="text-white/90 italic text-lg leading-relaxed">
+                        "Most people with this idea have a slide deck. I have a working monorepo."
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </motion.div>
+
+            {/* See More CTA */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="mt-16 text-center"
+            >
+              <Link to="/projects">
+                <Button size="lg" variant="outline" className="h-14 px-8 text-lg border-white/20 bg-white/5 backdrop-blur-md hover:bg-white/10 text-white rounded-full transition-all gap-2">
+                  See More Projects
+                  <ArrowRight className="w-5 h-5" />
+                </Button>
+              </Link>
+            </motion.div>
           </div>
         </section>
 

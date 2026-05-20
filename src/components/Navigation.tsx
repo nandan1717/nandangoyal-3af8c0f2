@@ -13,15 +13,13 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinkClass = ({ isActive }: { isActive: boolean }) =>
-    `text-sm font-medium transition-colors hover:text-accent ${
-      isActive ? "text-accent border-b-2 border-accent" : "text-foreground"
+    `text-sm font-medium transition-colors hover:text-accent ${isActive ? "text-accent border-b-2 border-accent" : "text-foreground"
     } pb-1`;
 
   const mobileNavLinkClass = ({ isActive }: { isActive: boolean }) =>
-    `block text-lg font-medium py-3 px-4 rounded-lg transition-colors ${
-      isActive
-        ? "bg-accent text-accent-foreground"
-        : "text-foreground hover:bg-muted"
+    `block text-lg font-medium py-3 px-4 rounded-lg transition-colors ${isActive
+      ? "bg-accent text-accent-foreground"
+      : "text-foreground hover:bg-muted"
     }`;
 
   const navItems = [
@@ -67,26 +65,26 @@ const Navigation = () => {
                   {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                 </button>
               </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-background border-l border-white/10">
-              <SheetHeader>
-                <SheetTitle className="text-left text-2xl font-bold text-white">
-                  Menu
-                </SheetTitle>
-              </SheetHeader>
-              <nav className="flex flex-col gap-2 mt-8">
-                {navItems.map((item) => (
-                  <NavLink
-                    key={item.to}
-                    to={item.to}
-                    end={item.end}
-                    className={mobileNavLinkClass}
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {item.label}
-                  </NavLink>
-                ))}
-              </nav>
-            </SheetContent>
+              <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-background border-l border-white/10">
+                <SheetHeader>
+                  <SheetTitle className="text-left text-2xl font-bold text-white">
+                    Menu
+                  </SheetTitle>
+                </SheetHeader>
+                <nav className="flex flex-col gap-2 mt-8">
+                  {navItems.map((item) => (
+                    <NavLink
+                      key={item.to}
+                      to={item.to}
+                      end={item.end}
+                      className={mobileNavLinkClass}
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {item.label}
+                    </NavLink>
+                  ))}
+                </nav>
+              </SheetContent>
             </Sheet>
           </div>
         </div>

@@ -5,9 +5,11 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Code, Briefcase, ExternalLink, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import isybEcosystem from "@/assets/isyb-ecosystem.png";
 import isybEvents from "@/assets/isyb-events.png";
 import isybPortfolio from "@/assets/isyb-portfolio.png";
+import networkingPilotLogo from "@/assets/networking-pilot-logo.png";
 
 const Projects = () => {
   const breadcrumbSchema = {
@@ -31,19 +33,20 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "Project Management Intern",
-      org: "I Support Your Business",
+      title: "ISupportYou",
+      org: "Client Delivery — Solo Developer",
       highlights: [
-        "Led requirements gathering and delivered features in 10 Agile sprints",
-        "Facilitated Agile ceremonies and sprint planning",
-        "Implemented Jira, improving cross-team alignment across 5 departments",
-        "Hired and mentored new intern for Jira management",
-        "Met all budget and timeline targets"
+        "Built a full multi-page website for a global support program's 7-pillar ecosystem",
+        "Integrated Proximy API client-side for live, searchable, sortable events — no backend",
+        "Delivered homepage, ecosystem page, interactive portfolio, and live events page",
+        "Interactive portfolio with category filtering, text search, and per-project image carousels",
+        "Responsive across mobile, tablet, and desktop — shipped on time and on scope"
       ],
       icon: Briefcase,
-      status: "Feb 2025 – Mar 2026 (Remote, Burnaby, Canada)",
-      techStack: ["Agile", "Scrum", "Jira", "React", "TypeScript", "Supabase", "Tailwind CSS", "Figma"],
+      status: "2025 · Shipped & Live",
+      techStack: ["HTML", "CSS", "JavaScript", "Bootstrap 5", "Proximy API"],
       link: "https://www.isupportyouprogram.com",
+      caseStudyLink: "/isupportyou",
       screenshots: [isybEcosystem, isybEvents, isybPortfolio],
     },
     {
@@ -64,6 +67,23 @@ const Projects = () => {
         { url: "https://www.isupportyouprogram.com", label: "I Support Your Business" },
         { url: "https://www.mngarg.com", label: "MN Garg Trading Co." }
       ]
+    },
+    {
+      title: "Networking Pilot",
+      org: "Solo Builder — Product, Design & Engineering",
+      highlights: [
+        "AI alignment score per event based on resume analysis",
+        "Personalized elevator pitch per event with tone toggle (Pro / Casual / Bold)",
+        "Client-side PII scrubbing before any data reaches the Gemini API",
+        "Row Level Security on every Supabase table by design",
+        "Dual platform — web (Next.js) & mobile (Expo) from a single Turborepo",
+        "Automated nudge & re-engagement email pipelines via Resend"
+      ],
+      logo: networkingPilotLogo,
+      status: "2025 · Shipped",
+      techStack: ["Next.js", "Expo", "Supabase", "Gemini AI", "Turborepo", "Resend", "TypeScript"],
+      link: "https://networkingpilot.ca",
+      caseStudyLink: "/networking-pilot",
     },
   ];
 
@@ -125,8 +145,11 @@ const Projects = () => {
                         
                         <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
                           <div className="flex items-start gap-6">
-                            <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0 shadow-xl group-hover:border-accent/50 transition-colors duration-500">
-                              <Icon className="w-8 h-8 text-accent" />
+                            <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0 shadow-xl group-hover:border-accent/50 transition-colors duration-500 overflow-hidden">
+                              {project.logo
+                                ? <img src={project.logo} alt={project.title} className="w-12 h-12 object-contain" />
+                                : <Icon className="w-8 h-8 text-accent" />
+                              }
                             </div>
                             <div>
                               <h2 className="text-3xl font-black text-white tracking-tight mb-2 group-hover:text-accent transition-colors duration-500">
@@ -175,7 +198,7 @@ const Projects = () => {
                             </div>
                           </div>
 
-                          {(project.link || project.links) && (
+                          {(project.link || project.links || project.caseStudyLink) && (
                             <div className="pt-4">
                               <h3 className="text-sm font-bold text-foreground/50 uppercase tracking-widest mb-4">Live Links</h3>
                               <div className="flex flex-wrap gap-3">
@@ -186,8 +209,20 @@ const Projects = () => {
                                   >
                                     <a href={project.link} target="_blank" rel="noopener noreferrer" className="gap-2">
                                       Visit Project
-                                      <ArrowRight className="w-4 h-4" />
+                                      <ExternalLink className="w-4 h-4" />
                                     </a>
+                                  </Button>
+                                )}
+                                {project.caseStudyLink && (
+                                  <Button
+                                    asChild
+                                    variant="outline"
+                                    className="h-12 px-6 rounded-full border-white/20 bg-white/5 hover:bg-white/10 text-white transition-all font-semibold backdrop-blur-md"
+                                  >
+                                    <Link to={project.caseStudyLink} className="gap-2">
+                                      Read Case Study
+                                      <ArrowRight className="w-4 h-4" />
+                                    </Link>
                                   </Button>
                                 )}
                                 {project.links?.map((link, linkIdx) => (

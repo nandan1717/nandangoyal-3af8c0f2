@@ -11,6 +11,8 @@ import Journey from "./pages/Journey";
 import Testimonials from "./pages/Testimonials";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
+import NetworkingPilotCaseStudy from "./pages/NetworkingPilotCaseStudy";
+import ISupportYouCaseStudy from "./pages/ISupportYouCaseStudy";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +31,8 @@ const App = () => (
           <Route path="/journey" element={<Journey />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/networking-pilot" element={<NetworkingPilotCaseStudy />} />
+          <Route path="/isupportyou" element={<ISupportYouCaseStudy />} />
           <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
