@@ -6,11 +6,10 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { motion, AnimatePresence } from "framer-motion";
 import { Award, BookOpen, Code, Briefcase, Brain, Users, Rocket, Shield, Cpu, ArrowRight, ExternalLink } from "lucide-react";
-import carousel1 from "@/assets/carousel-1.jpeg";
 import carousel2 from "@/assets/carousel-2.jpeg";
 import carousel3 from "@/assets/carousel-3.jpeg";
 import carousel4 from "@/assets/carousel-4.jpeg";
-import carousel5 from "@/assets/carousel-5.mp4";
+import carousel6 from "@/assets/carousel-6.jpeg";
 import networkingPilotLogo from "@/assets/networking-pilot-logo.png";
 
 const Home = () => {
@@ -50,7 +49,7 @@ const Home = () => {
     }
   };
 
-  const images = [carousel1, carousel2, carousel3, carousel4];
+  const images = [carousel6, carousel2, carousel3, carousel4];
   const [currentImgIndex, setCurrentImgIndex] = useState(0);
 
   useEffect(() => {
