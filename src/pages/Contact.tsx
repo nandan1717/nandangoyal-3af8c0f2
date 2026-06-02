@@ -54,8 +54,8 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background relative overflow-hidden text-foreground selection:bg-accent selection:text-foreground">
       <SEO 
-        title="Contact Nandan Goyal | Tech Consulting & PM Opportunities"
-        description="Get in touch with Nandan Goyal for tech consulting and project management opportunities. Available May 2026. Located in Surrey, BC, Canada."
+        title="Contact Nandan Goyal | Product Manager & Builder"
+        description="Get in touch with Nandan Goyal. Product Manager and builder based in Surrey, BC. Open to PM and Marketing Operations roles."
         canonical="https://nandangoyal.me/contact"
         structuredData={[breadcrumbSchema]}
       />

@@ -63,8 +63,8 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-background relative overflow-hidden text-foreground selection:bg-accent selection:text-accent-foreground">
       <SEO
-        title="Nandan Goyal | Tech Consultant & Project Manager | Available May 2026"
-        description="BBA Project Management Student at Yorkville University. PM Intern at ISYB, VP of YU Creators Club. Leading Agile teams, building full-stack projects, and delivering results."
+        title="Nandan Goyal | Product Manager & Builder | Surrey, BC"
+        description="Product Manager and builder based in Surrey, BC. BBA in Project Management (Yorkville University). Built Networking Pilot — an AI-powered event matching platform — and delivered client web products. Background in operations leadership, Agile delivery, and full-stack development. Open to PM and Marketing Operations roles."
         canonical="https://nandangoyal.me"
         structuredData={[personSchema, websiteSchema]}
       />
