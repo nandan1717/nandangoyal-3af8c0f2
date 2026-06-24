@@ -23,7 +23,7 @@ const NetworkingPilotCaseStudy = () => {
 
       <main className="relative z-10 pt-32 pb-20">
         <article className="max-w-3xl mx-auto px-4 sm:px-6">
-          
+
           <Link to="/" className="inline-flex items-center gap-2 text-foreground/60 hover:text-accent transition-colors mb-12 group font-medium">
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             Back to Home
@@ -87,20 +87,20 @@ const NetworkingPilotCaseStudy = () => {
               <h2 className="text-3xl font-bold text-white mb-6 tracking-tight">I kept showing up to the wrong rooms.</h2>
               <div className="space-y-4 text-foreground/70 text-lg leading-relaxed">
                 <p>
-                  As someone transitioning careers — from customer operations into product and tech — I went to a lot of networking events. 
+                  As someone transitioning careers — from customer operations into product and tech — I went to a lot of networking events.
                   Most of them were a waste of time. Not because the events were bad, but because I had <strong className="text-white font-bold">no way of knowing whether a room was right for me before I walked in.</strong>
                 </p>
                 <p>
-                  And when I did find a promising event, I'd freeze. What do I even say? How do I introduce myself in a way that's 
+                  And when I did find a promising event, I'd freeze. What do I even say? How do I introduce myself in a way that's
                   relevant to this specific crowd, this specific theme, these specific people in the room?
                 </p>
-                
+
                 <blockquote className="my-10 pl-6 border-l-4 border-accent bg-accent/5 py-4 pr-6 rounded-r-lg italic text-xl text-white font-serif shadow-lg">
                   "The problem wasn't access to events. It was knowing which door was mine — and having the right words ready when I opened it."
                 </blockquote>
 
                 <p>
-                  No tool existed that could look at <em className="text-white/90">my specific background</em> and tell me: this event fits you, here's why, 
+                  No tool existed that could look at <em className="text-white/90">my specific background</em> and tell me: this event fits you, here's why,
                   and here's exactly how to introduce yourself when you get there.
                 </p>
                 <p className="text-white font-semibold">So I built it.</p>
@@ -118,12 +118,12 @@ const NetworkingPilotCaseStudy = () => {
               <h2 className="text-3xl font-bold text-white mb-6 tracking-tight">A co-pilot that reads your resume and finds your room.</h2>
               <div className="space-y-4 text-foreground/70 text-lg leading-relaxed mb-10">
                 <p>
-                  Networking Pilot is a dual-platform application — web and mobile — that analyzes your resume, extracts your real skills 
+                  Networking Pilot is a dual-platform application — web and mobile — that analyzes your resume, extracts your real skills
                   and experience, and matches you to professional events in your area with a tailored alignment score.
                 </p>
                 <p>
-                  More importantly, it generates a <strong className="text-white font-bold">personalized elevator pitch</strong> for each event — not a generic template, 
-                  but one calibrated to your background and the event's theme, speakers, and organizers. You can toggle tone between 
+                  More importantly, it generates a <strong className="text-white font-bold">personalized elevator pitch</strong> for each event — not a generic template,
+                  but one calibrated to your background and the event's theme, speakers, and organizers. You can toggle tone between
                   Professional, Casual, and Bold depending on the room you're walking into.
                 </p>
               </div>
@@ -246,8 +246,8 @@ const NetworkingPilotCaseStudy = () => {
               <h2 className="text-3xl font-bold text-white mb-6 tracking-tight">What I'd do differently.</h2>
               <div className="space-y-4 text-foreground/70 text-lg leading-relaxed">
                 <p>
-                  The stack is heavier than an MVP needs. I over-engineered before validating. 
-                  If I rebuilt this today, I'd start with a single web app, one AI call, and five real users giving me feedback — 
+                  The stack is heavier than an MVP needs. I over-engineered before validating.
+                  If I rebuilt this today, I'd start with a single web app, one AI call, and five real users giving me feedback —
                   before touching Turborepo or building the mobile client.
                 </p>
                 <p>

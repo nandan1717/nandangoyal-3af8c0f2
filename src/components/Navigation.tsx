@@ -25,7 +25,6 @@ const Navigation = () => {
   const navItems = [
     { to: "/", label: "Home", end: true },
     { to: "/about", label: "About" },
-    { to: "/achievements", label: "Achievements" },
     { to: "/journey", label: "Journey" },
     { to: "/testimonials", label: "Testimonials" },
     { to: "/projects", label: "Projects" },
